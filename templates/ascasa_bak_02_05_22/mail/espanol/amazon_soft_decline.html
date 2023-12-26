@@ -1,0 +1,20 @@
+<table  width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
+  <tr>
+    <td style="border-bottom: 1px solid; border-color: #cccccc;"><div align="right"><img src="{$logo_path}logo.gif"></div></td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Saludos, </strong><br />
+      <br />
+      Muchas gracias por tu pedido{if $STORE_NAME} en {$STORE_NAME}{/if}.<br />
+      <br />
+		Desgraciadamente, Amazon Pay ha rechazado tu pago.<br />
+		Por favor, dir&iacute;gete a <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR}">{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR}</a> y revisa la informaci&oacute;n de pago de tu pedido.<br />
+		De forma alternativa, en <a href="https://payments.amazon.es/overview">https://payments.amazon.es/overview</a> puedes modificar la informaci&oacute;n de pago para tu pedido seleccionando un m&eacute;todo de pago distinto o bien introduciendo uno nuevo.
+		Una vez hayas actualizado tu informaci&oacute;n de pago, solicitaremos autom&aacute;ticamente un nuevo pago en Amazon Payments y recibir&aacute;s un correo electr&oacute;nico de confirmaci&oacute;n.<br />
+<br />
+    </font></td>
+  </tr>
+</table>
+
+[SIGNATUR]
+

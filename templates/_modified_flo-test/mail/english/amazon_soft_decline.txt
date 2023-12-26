@@ -1,0 +1,10 @@
+
+Dear customer,
+
+Thank you for your order {if $ORDER_NR} nr. {$ORDER_NR}{/if}{if $ORDER_DATE} from {$ORDER_DATE}{/if}.
+Unfortunately your payment was rejected by Amazon Pay.
+Please change your Amazon payment method at {$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR}
+Alternatively, you can update the payment information for your order at https://payments.amazon.co.uk/overview by selecting a different payment method or entering a new payment method.
+A renewed attempt at payment will then be made using the new payment method, and you will receive a confirmation email accordingly.
+
+[SIGNATUR]

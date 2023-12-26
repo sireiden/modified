@@ -1,0 +1,57 @@
+/* assistant-regular - latin */
+@font-face {
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/assistant-v5-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Assistant'), local('Assistant-Regular'),
+       url('/fonts/assistant-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/assistant-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/assistant-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/assistant-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/assistant-v5-latin-regular.svg#Assistant') format('svg'); /* Legacy iOS */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: -1px;
+  src: url('/fonts/open-sans-v18-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/open-sans-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/open-sans-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/open-sans-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/open-sans-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/open-sans-v18-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+/* open-sans-condensed-300 - latin */
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/open-sans-condensed-v15-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/open-sans-condensed-v15-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/open-sans-condensed-v15-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/open-sans-condensed-v15-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/open-sans-condensed-v15-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/open-sans-condensed-v15-latin-300.svg#OpenSansCondensed') format('svg'); /* Legacy iOS */
+}
+
+
+/* oxygen-700 - latin */
+@font-face {
+  font-family: 'Oxygen700';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/oxygen-v10-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('/fonts/oxygen-v10-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/oxygen-v10-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/oxygen-v10-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/oxygen-v10-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/oxygen-v10-latin-700.svg#Oxygen') format('svg'); /* Legacy iOS */
+}

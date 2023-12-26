@@ -1,0 +1,2 @@
+{if $NOTIFY_COMMENTS}
+{$NOTIFY_COMMENTS}{/if}

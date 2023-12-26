@@ -1,0 +1,29 @@
+{if $options!=''}
+<div id="optionen{$smarty.get.products_id|intval}">
+<div class="productoptions">
+  {foreach name=outer item=options_data from=$options}
+  <div class="options_row_multi">
+    <div class="options_name">{$options_data.NAME}</div>
+    <div class="options_select">
+      <select name="id[{$options_data.ID}]" id="sel_{$options_data.ID}">
+      <option data-attrdata="{$options_data.DATA.0.JSON_ATTRDATA}" value="">Bitte ausw&auml;hlen</option>
+      {foreach key=key_data item=item_data from=$options_data.DATA}
+        <option data-attrdata="{$item_data.JSON_ATTRDATA}" value="{$item_data.ID}">{$item_data.TEXT} {if $item_data.PRICE != ''}{$item_data.PREFIX} {$item_data.PRICE}{/if} </option>
+      {/foreach}
+      </select>
+    </div>
+  </div>
+  {/foreach}
+</div>
+</div>
+{/if}
+
+{if $PRODUCTS_OPTION_ERROR} 
+{literal}  
+<script>
+$(document).ready(function () {
+	alert('Der Artikel konnte nicht in den Warenkorb gelegt werden, da keine der nebenstehenden Optionen ausgewählt wurde!', 'Ein Fehler ist aufgetreten');
+});
+</script>
+{/literal}
+{/if}

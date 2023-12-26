@@ -1,0 +1,19 @@
+<table  width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
+  <tr>
+    <td style="border-bottom: 1px solid; border-color: #cccccc;"><div align="right"><img src="{$logo_path}logo.gif"></div></td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Dear customer, </strong><br />
+      <br />
+      Thank you for your order {if $ORDER_NR} nr. {$ORDER_NR}{/if}{if $ORDER_DATE} from {$ORDER_DATE}{/if}.<br />
+      <br />
+		Unfortunately your payment was rejected by Amazon Pay.<br />
+		Please change your Amazon payment method here: <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR}">update the payment information</a><br />
+		Alternatively, you can update the payment information for your order at <a href="https://payments.amazon.co.uk/overview">https://payments.amazon.co.uk/overview</a> by selecting a different payment method or entering a new payment method.
+		A renewed attempt at payment will then be made using the new payment method, and you will receive a confirmation email accordingly.
+<br />
+    </font></td>
+  </tr>
+</table>
+
+[SIGNATUR]

@@ -1,0 +1,5 @@
+Dear customer
+
+Please use the following link to execute the payment: {$url}
+
+[SIGNATUR]

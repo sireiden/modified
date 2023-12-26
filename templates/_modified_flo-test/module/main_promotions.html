@@ -1,0 +1,22 @@
+<h1>Sonderaktionen</h1>
+{foreach name=outer item=promotion from=$PROMOTIONS}
+<div class="promotionsbox">
+	<div class="pb_inner">
+		<div class="pb_left">
+			<br>
+			{if $promotion.manufacturers_image != ''}
+				<div><a href="{$promotion.manufacturers_url}"><img src="{$promotion.manufacturers_image}" alt="{$promotion.manufacturers_name}" style="width:96px" /></a></div>
+			{/if}
+			<a href="{$promotion.manufacturers_url}">{$promotion.manufacturers_name}</a><br><br>
+			<span ><a style="text-decoration:underline" href="{$promotion.link}"><strong>{$promotion.name}</strong></a></span>
+		</div>
+		<div class="pb_right">
+			{if $promotion.clean_image != ''}
+			<div><a href="{$promotion.link}"><img src="{$promotion.clean_image}" alt="{$promotion.name}" style="width:90%" /></a></div>
+			<br />
+			{/if}
+		</div>
+	</div>
+</div>
+{/foreach}
+

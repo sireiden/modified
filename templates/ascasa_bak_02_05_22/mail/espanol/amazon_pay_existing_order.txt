@@ -1,0 +1,5 @@
+Estimado cliente,
+
+por favor, haga click en el enlace a continuaci&oacute;n para completar la compra: {$url}
+
+[SIGNATUR]

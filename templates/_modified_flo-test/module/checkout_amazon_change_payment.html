@@ -1,0 +1,21 @@
+{config_load file="$language/amazon.conf" section="checkout_amazon"}
+{config_load file="$language/lang_$language.conf" section="checkout_payment"}
+{if $ERROR}
+    <div class="errormessage">{$ERROR}</div>
+{/if}
+<h1>
+    {#heading_change_payment#}
+</h1>
+{if $success == 1}
+    <div>
+        {$smarty.const.AMZ_CHANGE_PAYMENT_SUCCESS}
+    </div>
+{else}
+    <div id="walletWidgetDiv" class="walletPageWidget"></div>
+    <div style="margin-top:10px; float:left;">
+        <a href="{'account.php'}">{$smarty.const.AMZ_CANCEL_ORDER}</a>
+    </div>
+    <div style="float:right; width: 45%; text-align:right; display:none;" id="amazon_button" >
+        <a href="{'checkout_amazon_change_payment.php'|xtc_href_link:"amz=1&action=confirm_payment&order=`$smarty.get.order`":'SSL'}">{$BUTTON_CONTINUE}</a>
+    </div>
+{/if}

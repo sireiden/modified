@@ -1,0 +1,12 @@
+
+Saludos,
+
+Muchas gracias por tu pedido{if $STORE_NAME} en {$STORE_NAME}{/if}.
+Desgraciadamente, Amazon Pay ha rechazado tu pago.
+Por favor, dirígete a {$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR} y revisa la información de pago de tu pedido.
+De forma alternativa, en https://payments.amazon.es/overview puedes modificar la informaci&oacute;n de pago para tu pedido seleccionando un m&eacute;todo de pago distinto o bien introduciendo uno nuevo.
+Una vez hayas actualizado tu informaci&oacute;n de pago, solicitaremos autom&aacute;ticamente un nuevo pago en Amazon Payments y recibir&aacute;s un correo electr&oacute;nico de confirmaci&oacute;n.<br />
+
+
+[SIGNATUR]
+

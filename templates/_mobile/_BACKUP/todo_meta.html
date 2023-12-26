@@ -1,0 +1,26 @@
+<!--------------------------------------------- RESPONSIVESLIDES - SLIDER ---------------------------------------------->  
+  <link rel="stylesheet" href="/templates/_mobile/responsiveslides.css">
+  <link rel="stylesheet" href="/templates/_mobile/slideshow/slider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="/templates/_mobile/js/responsiveslides.min.js"></script>
+  <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {  
+      // Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: false,
+        nav: true,
+        maxwidth: 2000,        
+        speed: 1500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+    });
+  </script>
+<!---------------------------------------------  RESPONSIVESLIDES - SLIDER //// ENDE -----------------------------------> 

@@ -1,0 +1,11 @@
+
+Cher client,
+
+Merci pour votre commande auprès{if $STORE_NAME} de {$STORE_NAME}{/if}.
+Malheureusement Amazon Pay n’a pas pu traiter le paiement.
+Veuillez aller sur {$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR} et mettez à jour les informations de paiement pour votre commande.
+Vous pouvez &eacute;galement mettre &agrave; jour les informations de paiement pour votre commande &agrave; l&lsquo;adresse https://payments.amazon.fr/overview en s&eacute;lectionnant un autre mode de paiement ou en ajoutant
+Volveremos a tratar de realizar el pago con el nuevo m&eacute;todo y te enviaremos un correo electr&oacute;nico de confirmaci&oacute;n.de confirmation.
+
+[SIGNATUR]
+

@@ -1,0 +1,8 @@
+{if isset($CONTENT_HEADING)}<h1>{$CONTENT_HEADING}</h1>{/if}
+<div class="content_site cf">
+  {if $CONTENT_IMAGE != ''}
+  	<img src="{$CONTENT_IMAGE}" alt="{$CONTENT_HEADING}"  /><br />
+  {/if}
+  {$CONTENT_BODY}
+</div>
+

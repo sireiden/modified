@@ -1,0 +1,76 @@
+{config_load file="$language/lang_$language.conf" section="newsletter"}
+{config_load file="$language/lang_$language.conf" section="create_account"}
+{config_load file="$language/lang_$language.conf" section="contact_us"}
+{config_load file="lang_`$language`.custom"}
+{config_load file="lang_`$language`.section" section="contact_us"}
+<!DOCTYPE html{$doctype}>
+<html {$html_params}>
+<head>
+  <meta charset="{$charset}" />
+  <title>{$title}</title>
+  <meta name="robots" content="noindex, nofollow, noodp" />
+  {if $base}<base href="{$base}" />{/if}
+  <link rel="stylesheet" type="text/css" href="{$tpl_path}stylesheet.css" />
+</head>
+<body class="popupcontent">
+<h1>Sonderpreis anfragen</h1>
+{if $success == '-1'} 
+    <div class="highlightbox plainleft cf">
+      <h4>Es ist ein Fehler aufgetreten.</h4>
+      <p>Für diesen Artikel steht keine Sonderpreisanfrage zur Verfügung.</p>
+    </div>
+{elseif $success != '1'}
+{if $error_message != ''}<div class="errormessage">{$error_message}</div>{/if}
+<h4>Hier haben Sie die Möglichkeit einen Sonderpreis für diesen Artikel anzufragen</h4>
+	 <div class="highlightbox cf">
+	 {$FORM_ACTION}
+	    <div class="registrationbox">
+		    <table>
+		      <tr>
+		        <td><span class="fieldtext">Anrede</span><span class="stern">{$INPUT_GENDER}</span></td>
+		      </tr>
+		      <tr>
+		        <td><span class="fieldtext">Vorname</span><span class="stern">{$INPUT_FIRSTNAME}</span></td>
+		      </tr>
+		      <tr>
+		        <td><span class="fieldtext">Nachname</span><span class="stern">{$INPUT_LASTNAME}</span></td>
+		      </tr>
+		      <tr>
+		        <td><span class="fieldtext">Firma</span>{$INPUT_COMPANY}</td>
+		      </tr>	
+		      <tr>
+		        <td><span class="fieldtext">Telefon</span>{$INPUT_TEL}</td>
+		      </tr>	
+		      <tr>
+		        <td><span class="fieldtext">E-Mail</span><span class="stern">{$INPUT_EMAIL|replace:"type=\"text\"":"type=\"email\""}</span></td>
+		      </tr>
+		      <tr>
+		        <td><span class="fieldtext">Ihr Wunschpreis</span>{$INPUT_PRICE}</td>
+		      </tr>	
+	        {if $VVIMG}
+	        <tr>
+	          <td><span class="fieldtext">{#text_sec_code#}</span><span class="stern">{$VVIMG}</span></td>
+	        </tr>
+	        {/if}
+	        {if $INPUT_CODE}
+	        <tr>
+	          <td><span class="fieldtext">{#text_inp_code#}</span><span class="stern">{$INPUT_CODE}<span class="inputRequirement"> *</span></span></td>
+	        </tr>
+	        {/if}		            
+	        <tr>
+	          <td><span class="fieldtext">{#text_message#}</span><span class="stern">{$INPUT_TEXT}</span></td>
+	         </tr>
+		    </table>
+		</div>
+		<div class="button_right cf"><div class="cssButtonPos4">{$BUTTON_SUBMIT}</div></div>
+	{$FORM_END}
+	</div>
+{else}	
+    <div class="highlightbox plainleft cf">
+      <h4>Vielen Dank <span class="pflicht">&nbsp;</span></h4>
+      <p>Wir haben Ihre Sonderpreis-Anfrage erhalten, werden diese prüfen und uns anschließend mit Ihnen in Verbindung setzen.</p>
+    </div>
+{/if}
+
+</body>
+</html>

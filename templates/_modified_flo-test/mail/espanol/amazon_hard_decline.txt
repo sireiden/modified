@@ -1,0 +1,7 @@
+
+Saludos,
+
+Desgraciadamente, Amazon Pay ha rechazado el pago de tu pedido en nuestra tienda online{if $STORE_NAME} {$STORE_NAME}{/if}. Por favor, ponte en contacto con nosotros.
+
+[SIGNATUR]
+

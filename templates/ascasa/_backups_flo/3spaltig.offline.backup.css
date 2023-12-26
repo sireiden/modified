@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding-right: 10px;
+    min-height: auto; 
+}
+.column2 {
+    float: left;
+    width: 66.66%;
+    padding-right: 10px;
+    min-height: 250px; 
+}
+.column4 {
+    float: left;
+    width: 20%;
+    padding-right: 10px;
+    min-height: auto; 
+}
+.column5 {
+    float: left;
+    width: 20%;
+    padding-right: 10px;
+    min-height: auto; 
+}
+.column2x {
+    float: left;
+    width: 50%;
+    padding: 0px;
+    min-height: auto; 
+}
+.column4x {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    min-height: auto; 
+}
+.column5x {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    min-height: auto; 
+}
+.columnR {
+    float: left;
+    width: 33.33%;
+    padding-right: 0px;
+    min-height: auto; 
+}
+.columnR2x {
+    float: left;
+    width: 50%;
+    padding-right: 0px;
+    min-height: auto; 
+}
+.columnR4x {
+    float: left;
+    width: 25%;
+    padding-right: 0px;
+    min-height: auto; 
+}
+.columnR5x {
+    float: left;
+    width: 20%;
+    padding-right: 0px;
+    min-height: auto; 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;    
+}
+
+@media (max-width: 680px) {
+    .column {
+        width: 100%; padding-right: 0px;     
+    }
+    .column2 {
+        width: 100%; padding-right: 0px;
+    } 
+    .column4x {
+        width: 100%; padding-right: 0px;
+    } 
+    .column2x {
+        width: 100%; padding-right: 0px;
+    }    
+    .columnR {
+        width: 100%; padding-right: 0px;
+    }            
+    .columnR2x {
+        width: 100%; padding-right: 0px;
+    }  
+    .columnR4x {
+        width: 100%; padding-right: 0px;
+    }      
+    .columnR5x {
+        width: 100%; padding-right: 0px;
+    }              
+}

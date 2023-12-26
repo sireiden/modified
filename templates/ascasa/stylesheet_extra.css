@@ -1,0 +1,73 @@
+/* Markenslider */
+ul.bxcarousel_main_promotions img {
+  position: relative !important;
+}
+ul.bxcarousel_manufacturers_slider img {
+  position: relative !important;
+}
+
+#manufacturers_slider_prev { margin-left: 10px; background: url(css/images/controls.png) no-repeat 0 -32px; height:32px;width:40px; margin-top:10px }
+#manufacturers_slider_prev a {position: absolute; top: 50%; margin-top: -16px; outline: 0; width: 32px; height: 32px; text-indent: -9999px; z-index: 2200;} 
+#manufacturers_slider_next { margin-right: 10px; background: url(css/images/controls.png) no-repeat -43px -32px; height:32px;width:40px;margin-top:10px}
+#manufacturers_slider_next a {position: absolute; top: 50%; margin-top: -16px; outline: 0; width: 32px; height: 32px; text-indent: -9999px; z-index: 2200;}
+
+.promotionsbox {
+  float:left;
+  width:100%;
+  height:auto;
+  padding: 0px 10px;
+  margin: 0px 0px 20px 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.pb_inner {
+  border: 1px solid #ddd;
+  padding: 10px 10px 5px 10px;
+  height:200px;
+}
+.pb_left {
+	width:30%;	
+	float:left;
+}
+.pb_right {
+	width:70%;
+	float:left;	
+}
+
+#cookieChoiceInfo{background-color:#fff;padding:10px;z-index:1000;text-align:center; opacity:0.5;position:fixed;width:100%;left:0;bottom:0;overflow:auto;z-index:30000}
+div#cookieChoiceInfo{background-color:#EEE;padding:10px;z-index:1000;text-align:center; opacity:0.8;font-weight:bold;border:1px solid;position:fixed;width:100%;left:0;bottom:0;overflow:auto}  
+#cookieChoiceInfo a{box-sizing:border-box;padding:4px 13px;margin-bottom:5px;display:inline-block;clear:both;border:2px solid transparent;font-weight:400;text-transform:uppercase}
+#cookieChoiceInfo a:hover{font-weight:400;color:rgba(255,255,255,.85);background:rgba(0,0,0,.7);text-decoration: none;outline:0}
+
+/* Änderungen für das Lexikon */
+.lexikon_keyword { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; text-decoration: none; background-color: #FF0; }
+#lexAlphabet { background-color: none; text-align: left; padding: 0px 10px 0px 10px; margin: 0px 0px 20px 0px; list-style-type: none; height: 25px; font-size: 15px; font-weight: bold; letter-spacing: 0.1em; }
+ul#lexAlphabet li { height: 25px; float: left; padding: 0px 5px 0px 0px; margin: 0; }
+ul#lexAlphabet a, ul#lexAlphabet a:link, ul#lexAlphabet a:visited { line-height: 25px; text-decoration: none; margin: 0px; padding: 0px; }
+ul#lexAlphabet a:hover { color: #F60; text-decoration: none; }
+ul#lexAlphabet a.active { font-weight: bold; }
+#lexName { font-family: "Verdana", "sans-serif"; font-weight: bold; font-size: 16px; color: #333; border-bottom-style: solid; padding-bottom: 3px; border-bottom-width: thin; border-bottom-color: #999; padding-top: 15px; }
+#lexDescription { margin: 5px 0px 20px 10px; padding: 5px; background-color: none; font-family: "Verdana", "sans-serif"; }
+span.lex { border-bottom-style: dotted; padding-bottom: 0px; border-bottom-width: thin; border-color:#FF761B;color:#FF761B; }
+span.lex:hover { cursor: help; background-color: #F90; color: #333; border-bottom-style: none; font-weight: none; letter-spacing: none; }
+a.tooltip { text-decoration: none; }
+span.lex span.lex_details { display: none; }
+span.lex:hover span.lex_details { display: block; position: absolute; width: auto; height: auto; margin-left: -100px; margin-top: 10px; background-color: #fff; text-indent: 0; font-size: 11px; line-height: 13px; border: 1px solid #000; color: #000; text-decoration: none; text-align: left; padding: 10px; text-decoration: none; z-index: 999999; }
+
+/* Registrierung */
+div.registrationbox { padding: 15px; background-color: #EFEFEF; border: solid #CACACA 1px; color: #000000; margin-bottom: 20px; }
+
+/* Commerzbank / Consors Finanzierung */
+.commerz-finanz-listing {font-style: italic;}
+.commerz-finanz-lz {font-weight: 700; color: #b20000;}
+.commerz-finanz-fs85 {font-size: 85%;}
+.commer-finanz-listingshort{ font-size: 11px; color:#808080; line-height: 12px;}
+.commerz-finanz-big{font-weight: 700; font-size: 160%;color:#fd8701;}
+.commerz-finanz-desc {border: 1px solid #ccc; padding: 5px; margin: 5px;}
+.commerz_finanz_table {border-collapse: separate;border-spacing: 0;border: 0; width: 100%;}
+.commerz_finanz_table td,.commerz_finanz_table th {text-align: center;padding: 5px;}
+.commerz_finanz_table th {background-color: #e3e3e3;}
+.commerz_info_teaser{float:left;width:450px;padding:10px;font-family:Verdana;font-size:12px;}
+.commerz_info_teaser .headline {font-weight: 700; font-size: 119%;color:#fd8701;}
+.commerz_info_periods{float:left;width:580px;padding:10px;font-family:Verdana;font-size:12px;}

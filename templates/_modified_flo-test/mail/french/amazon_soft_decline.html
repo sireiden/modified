@@ -1,0 +1,20 @@
+<table  width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
+  <tr>
+    <td style="border-bottom: 1px solid; border-color: #cccccc;"><div align="right"><img src="{$logo_path}logo.gif"></div></td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Cher client, </strong><br />
+      <br />
+      Merci pour votre commande aupr&egrave;s{if $STORE_NAME} de {$STORE_NAME}{/if}.<br />
+      <br />
+		Malheureusement Amazon Pay n&lsquo;a pas pu traiter le paiement.<br />
+		Veuillez aller sur <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR}">{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR}</a> et mettez &agrave; jour les informations de paiement pour votre commande.<br />
+		Vous pouvez &eacute;galement mettre &agrave; jour les informations de paiement pour votre commande &agrave; l&lsquo;adresse <a href="https://payments.amazon.fr/overview">https://payments.amazon.fr/overview</a> en s&eacute;lectionnant un autre mode de paiement ou en ajoutant
+		Volveremos a tratar de realizar el pago con el nuevo m&eacute;todo y te enviaremos un correo electr&oacute;nico de confirmaci&oacute;n.de confirmation.
+<br />
+    </font></td>
+  </tr>
+</table>
+
+[SIGNATUR]
+

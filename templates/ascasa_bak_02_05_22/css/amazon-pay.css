@@ -1,0 +1,56 @@
+.rm_slide_header{cursor:pointer}
+#addressBookWidgetDiv{margin-bottom:20px}
+.shMethod{margin:1px 3px 5px;font-size:11px;float:left}
+#checkout_amazon{display:block}
+#checkout_amazon a{color:#EB7E10}
+.cba_header,.cba_header_wo_a{padding:5px;margin:4px 0;font-size:14px;color:#2F3841;font-weight:700}
+.amzBox{border:1px solid #BBB;border-radius:8px;padding:2px 4px 4px;margin-bottom:20px}
+.amzBox .rm_slide_content ol{padding-left:20px}
+#AmazonOrderTotals{float:right;padding-top:5px;margin-top:5px;border-top:1px solid #ddd}
+.walletPageWidget{height:300px;margin-top:10px;margin-bottom:10px}
+.amzSetAddressWr{margin:20px 0;text-align:center;height:250px}
+.amzButton{display:inline-block;padding:5px;margin:2px;border:1px solid #ddd;color:#333;border-radius:3px;background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y5ZjlmOSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:-moz-linear-gradient(top,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(249,249,249,1)),color-stop(100%,rgba(224,224,224,1)));background:-webkit-linear-gradient(top,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);background:-o-linear-gradient(top,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);background:-ms-linear-gradient(top,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);background:linear-gradient(to bottom,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e0e0e0', GradientType=0);border-color:#B9B9B9 #AAA #9D9D9D}
+.amzInput{padding:5px;border-radius:3px;border:1px solid #bbb;color:#555}
+.amzMessageWr{width:400px;border:1px solid #BBB;border-radius:8px;padding:20px;margin:20px auto}
+.amzError{font-weight:700;color:#900;margin:10px 0}
+.amzButtonStyle{background:#f9f9f9;background:-moz-linear-gradient(top,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(249,249,249,1)),color-stop(100%,rgba(224,224,224,1)));background:-webkit-linear-gradient(top,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);background:-o-linear-gradient(top,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);background:-ms-linear-gradient(top,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);background:linear-gradient(to bottom,rgba(249,249,249,1) 0,rgba(224,224,224,1) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e0e0e0', GradientType=0)}
+.accept_box_checkbox{float:left;width:25px;margin-top:5px}
+.accept_box_text{float:left;padding:2px}
+#agbWidget{margin-bottom:10px}
+.cba_item_img{width:60px;display:block;float:left;clear:left;margin-right:4px}
+.cba_item_img img{width:60px;max-width:60px}
+.priceSpalte{width:90px;display:block;float:right}
+.cba_clearer{clear:both;font-size:0;line-height:0}
+.cba_item_qty{font-size:10px;width:25px;float:left}
+.cba_item_title{font-size:11px;float:left;clear:both}
+.cba_item_price{font-size:11px;text-align:right;padding-bottom:5px;padding-top:2px}
+.cba_cart_value{text-align:right;font-size:12px;font-weight:700;margin-bottom:15px}
+.cba_item_list_odd{background-color:#efefef}
+.checkoutAmazonLegalBox{padding:10px;border:1px solid #ddd;border-color:#BBB;background:1px #f3f3f3;margin-bottom:20px;border-radius:8px}
+.amazonBoxes1 #addressBookWidgetDiv,.amazonBoxes1 #walletWidgetDiv{height:250px}
+#AmazonPartRight{margin-top:20px}
+@media (min-width:769px){.amazonBoxes1{float:left;width:49%}
+.amazonBoxes2>div{height:250px;width:49%}
+.amazonCheckoutFinal1{float:right;width:49%}
+.amazonBoxes2 #addressBookWidgetDiv{float:left;margin-right:2%}
+#AmazonPartRight{margin-top:0}}
+.amazonCheckoutFinal2{clear:both;margin-top:20px}
+.amazonBoxes2:not(.noShipping) #walletWidgetDiv{float:right}
+#AmazonProducts table{width:100%}
+#AmazonProducts table tr:first-child td{padding-left:5px}
+.box1 #amazonLogin{margin-top:10px}
+#amazonLoginLoginPage{clear:both;text-align:right}
+.buyProductWithAmazonButton{display:block;text-align:right;clear:both}
+.amzOtPrice{white-space:nowrap;text-align:right;padding-left:8px}
+#AmazonOrderTotals{width:66%}
+#AmazonOrderTotals>table{width:100%}
+.amz-warning{margin:10px 0;font-weight:700;color:#c00;font-size:1.4em}
+#amz_vat_id_info{padding:10px 5px}
+.amz-checkout-product-actions{line-height:1.4em}
+.amz-checkout-product-actions a{text-decoration:none;font-size:1.4em}
+#payWithAmazonDiv>img,.buyProductWithAmazonButton>img{max-width:100%}
+.amz-box-warning{background:#fcaf3e;border:1px solid #f57900;color:#fff;padding:.5em;margin:.25em 0}
+.amz-checkout-product-actions{white-space:nowrap}
+.amz-pay-only #AmazonOrderTotals{float:right;width:auto}
+.hide-if-not-logged-in{display:none}
+@media (max-width:600px){#AmazonProducts tr td:nth-child(3),#AmazonProducts tr td:nth-child(5){display:none}}

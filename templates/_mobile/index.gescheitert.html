@@ -1,0 +1,157 @@
+{config_load file="$language/lang_$language.conf" section="index"}
+{config_load file="lang_`$language`.custom"}
+{if isset($box_ADMIN)}<div class="adminspacer"></div>{$box_ADMIN}{/if}
+<div class="sidebar_closer{if isset($box_ADMIN)} sidebar_moremargin{/if}"><i class="fa fa-times"></i></div>
+
+<div id="layout_wrap">
+
+<!--  <div class="sidebar_layer"></div>-->
+  
+  
+  <div id="layout_content" class="cf">
+
+<!----------------------------------------------- CONTENT MAIN ANFANG -------------------------------------------------->
+    {if isset($home) && $home == true}
+      <div id="col_right">    
+        <div class="col_right_inner cf">
+          <div id="content_navbar">
+            <ul class="contentnavigation">
+              <li class="sidebar_btn"><span id="sidebar_marker"></span><a href="#"><i class="fa fa-bars"></i><span class="cn_nomobile_text">Men&uuml;</span></a></li>
+            </ul>
+          </div>
+                       
+<!----------------------------------------------- SLIDER NEU ANFANG ---------------------------------------------------->
+<div class="container">
+
+				<div class="columnsContainer">
+
+					<div class="wideColumn"> 
+                <a target="_blank" href="#"><img src="/templates/_mobile/img_mobile/header.jpg" alt="Header" title="Header" width="100%"></a><br />
+                <span class="white"><strong>Elektrogeräte günstig online kaufen. Mit 5 Jahren Garantie, 100 Tagen Rückgaberecht, 0%-Finanzierung. 
+                11 Zahlungsarten und Telefon-Hotline bis 22:00 Uhr</strong><br /></span>       				                         					                                                          
+          </div>  
+         
+				</div>
+
+
+
+              <!--<div class="callbacks_container">
+                <ul class="rslides" id="slider4">
+                  <li>
+                    <a target="_blank" href="#"><img src="/templates/_mobile/img_mobile/header.jpg" alt="Header" title="Header"></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="#"><img src="/templates/_mobile/img_mobile/header2.jpg" alt="Header" title="Header"></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="#"><img src="/templates/_mobile/img_mobile/header3.jpg" alt="Header" title="Header"></a>
+                  </li>                                                                        
+                </ul>
+              </div>--> 
+
+</div>
+
+
+
+
+<!----------------------------------------------- SLIDER NEU ENDE ------------------------------------------------------>    
+                              
+          {if isset($main_content)}{$main_content}{/if}
+          {if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}
+        </div>
+      </div>  
+      {* ENDE col_right *}
+<!----------------------------------------------- CONTENT MAIN ENDE ---------------------------------------------------->      
+      
+      
+
+      
+      
+      
+<!----------------------------------------------- CONTENT NAVIGATION EINBLENDUNG---------------------------------------->  
+      <div id="col_left_overlay">
+        <div id="col_left"{if isset($box_ADMIN)} class="col_left_moremargin"{/if}>
+          <div class="col_left_inner cf">
+            {if isset($box_CATEGORIES)}{$box_CATEGORIES}{/if}                     
+            {if isset($box_LOGIN)}{$box_LOGIN}{/if}          
+          </div>
+        </div>
+      </div>
+      {* ENDE col_left *}
+    {elseif isset($fullcontent) && $fullcontent == true}
+      <div id="col_full" class="cf">
+        {if isset($navtrail)}<div id="breadcrumb"><span class="breadcrumb_info">{#text_here#}</span>{$navtrail|replace:" &raquo; ":"<i class=\"fa fa-angle-right\"></i>"}</div>{/if}
+        {if isset($main_content)}{$main_content}{/if}
+        {if $bestseller}
+          {if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}
+        {/if}                                        
+      </div>
+      {* ENDE col_full *}
+    {else}
+      <div id="col_right">
+        <div class="col_right_inner cf">
+          <div id="content_navbar">
+            <ul class="contentnavigation">
+              <li class="sidebar_btn"><span id="sidebar_marker"></span><a href="#"><i class="fa fa-bars"></i><span class="cn_nomobile_text">Men&uuml;</span></a></li>
+            </ul>
+          </div>
+
+          {if isset($main_content)}{$main_content}{/if}                  
+          {if $bestseller}{if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}{/if}
+        </div>
+      </div>
+      {* ENDE col_right *} 
+      
+      
+ 
+      <div id="col_left_overlay">
+        <div id="col_left"{if isset($box_ADMIN)} class="col_left_moremargin"{/if}>
+          <div class="col_left_inner cf">
+            {if isset($box_CATEGORIES)}{$box_CATEGORIES}{/if}
+            {if isset($box_LOGIN)}{$box_LOGIN}{/if}                                
+          </div>
+        </div>
+      </div>
+      {* ENDE col_left *}
+    {/if}   
+  </div>
+<!----------------------------------------------- CONTENT NAVIGATION EINBLENDUNG---------------------------------------->
+    
+  {* ENDE layout_content *}
+
+<br />NEUER FOOTER HIER<br />
+
+
+<!-- FULL PAGE FOOTER GRAU-->
+
+
+
+{* BOF - COOKIE - Richtlinie *}
+<script>
+$(function() {ldelim}
+cookieChoices.showCookieConsentBar('{#cookiechoices_text#}','{#cookiechoices_button#}','{#cookiechoices_more#}','{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=63'}');
+{rdelim});
+</script>
+{* COOKIE - Richtlinie *}
+
+<!-- // FULL PAGE FOOTER GRAU-->
+
+</div>
+
+</div>
+{* ENDE layout_wrap *}
+
+{if ($smarty.const.TRACKING_COUNT_ADMIN_ACTIVE == 'true' && $smarty.session.customers_status.customers_status_id == '0') || $smarty.session.customers_status.customers_status_id != '0'}
+  {if $smarty.const.TRACKING_PIWIK_ACTIVE == 'true'}
+    {piwik url=$smarty.const.TRACKING_PIWIK_LOCAL_PATH id=$smarty.const.TRACKING_PIWIK_ID goal=$smarty.const.TRACKING_PIWIK_GOAL}
+  {/if}
+  {if $smarty.const.TRACKING_GOOGLEANALYTICS_ACTIVE == 'true'}
+    {googleanalytics account=$smarty.const.TRACKING_GOOGLEANALYTICS_ID}
+  {/if}
+  {if $smarty.const.TRACKING_FACEBOOK_ACTIVE == 'true'}
+    {facebook id=$smarty.const.TRACKING_FACEBOOK_ID}
+  {/if}
+{/if}
+{if $smarty.const.GOOGLE_CERTIFIED_SHOPS_MERCHANT_ACTIVE == 'true'}
+  {googlecertificate subaccount=$smarty.const.GOOGLE_SHOPPING_ID account=$smarty.const.GOOGLE_TRUSTED_ID}
+{/if}

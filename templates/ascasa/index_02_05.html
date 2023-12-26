@@ -1,0 +1,435 @@
+{config_load file="$language/lang_$language.conf" section="index"}
+{config_load file="lang_`$language`.custom"}
+{if isset($smarty.session.tpl) AND $smarty.session.tpl == '_mobile'}
+	{include file="index_mobile.html"}
+{else}
+{if isset($box_ADMIN)}<div class="adminspacer"></div>{$box_ADMIN}{/if}
+<div class="sidebar_closer{if isset($box_ADMIN)} sidebar_moremargin{/if}"><i class="fa fa-times"></i></div>
+
+
+
+
+DO SAMMA
+<div id="layout_wrap">
+
+  <div id="layout_navbar">
+    <div class="layout_navbar_inner">
+      <ul class="topnavigation cf">
+        {if isset($box_INFOBOX)}
+          <li class="tn_group">{$box_INFOBOX}</li>
+        {/if}
+        {if isset($box_LANGUAGES) && trim($box_LANGUAGES) != ''}
+          <li class="tn_lang">{$box_LANGUAGES}</li>
+        {/if}
+        {if isset($smarty.session.customer_id)}
+          <li><a href="{$logoff}"><i class="fa fa-sign-out"></i><span class="tn_nomobile">{#link_logoff#}</span></a></li>
+        {else}
+          <li><a href="{$create_account}"><i class="fa fa-user-plus"></i><span class="tn_nomobile">{#new_customer#}</span></a></li>
+          <li><a href="{$login}"><i class="fa fa-sign-in"></i><span class="tn_nomobile">{#link_login#}</span></a></li>
+        {/if}
+        {if isset($account)}
+          <li><a href="{$account}"><i class="fa fa-user"></i><span class="tn_nomobile">{#link_account#}</span></a></li>
+        {/if}
+        <li><a href="{$index}"><i class="fa fa-home"></i><span class="tn_nomobile">{#link_index#}</span></a></li>
+      </ul>
+    </div>
+  </div>
+  {* ENDE layout_navbar *}
+
+
+<!-- FULL PAGE HEADER GRAU-->
+<div id="layout_header">
+<!-- 5SPALTIG-->
+<center>
+<div class="container">
+    <div class="row">            
+        <div class="column5">                
+          <div class="contentBox">                
+              <br /><a href="/"><img alt="" src="{$tpl_path}img_ascasa/ascasa-logo.png" style="width: 110%;"></a>              
+          </div>                            
+        </div>           
+        <div class="column5">                
+          <div class="contentBox">                               
+<br /><br /><span class="white">
+<i class="fa fa-phone"></i> +49 (0) 89 / 9616069-00<br />
+<a class="white" href="mailto:info@ascasa.de"><i class="fa fa-envelope"></i>&nbsp;info@ascasa.de</a><br />
+<a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=7'}"><i class="fa fa-share"></i>&nbsp;Kostenloser R&uuml;ckrufservice</a><br />
+</span>                
+          </div>              
+        </div> 
+        <div class="column5">                
+          <div class="contentBox">                               
+<br /><br />
+{* Suchfeld - Inhalt kommt aus boxes/box_search.html *} 
+{if isset($box_SEARCH)}
+	<div id="search">{$box_SEARCH}</div>
+{/if}     
+          </div>              
+        </div> 
+        <div class="column5">                
+          <div class="contentBox">                               
+<span class="white"><br /><br />
+{if isset($smarty.session.customer_id)}
+	<a class="white" href="{$logoff}"><i class="fa fa-lock"></i> Logout</a>
+{else}
+	<a class="white" href="{$login}"><i class="fa fa-lock"></i> Login</a>
+ {/if}
+ <br />
+{if isset($account)}
+	<a class="white" href="{$account}"><i class="fa fa-user-md"></i><span class="tn_nomobile"> {#link_account#}</span></a>
+{else}
+	<a class="white" href="{$create_account}"><i class="fa fa-user-md"></i><span class="tn_nomobile"> {#new_customer#}</span></a>
+{/if}
+ <br />
+<a class="white" href="{$checkout}"><i class="fa fa-eur"></i><span class="tn_nomobile"> {#link_checkout#}</span></a>
+</span>                
+          </div>              
+        </div>        
+        <div class="columnR5x">              
+          <div class="contentBox">                
+<span class="white"><br /><br />
+{* Warenkorb - Inhalt kommt aus boxes/box_cart.html *} 
+{if isset($box_CART)}
+	<div class="cart">{$box_CART}</div>
+{/if}
+          </div>              
+        </div>
+    </div>            
+</div>
+</center>
+<!-- // 5SPALTIG--> 
+</div>
+<!-- // FULL PAGE HEADER GRAU-->
+  <div id="layout_logo" class="cf">
+      
+<!------------------------------------------ Megamenu ANFANG ------------------------------------------------------------>
+    <div style="width: 100%;" class="menu-wrapper" role="navigation">
+      <ul class="nav" role="menubar">
+        <li role="menuitem">
+          <a href="#">Kochfelder</a>
+          <div class="mega-menu" aria-hidden="true" role="menu">
+            <div class="nav-column">
+              <h3>&raquo; Kochfelder für Herde</h3>
+              <ul>
+                <li role="menuitem"><a href="#">bis 60 cm Breite</a></li>
+                <li role="menuitem"><a href="#">bis 70 cm Breite</a></li>
+                <li role="menuitem"><a href="#">bis 80 cm Breite</a></li>
+              </ul>
+              <h3>&raquo; Kochfelder (autark)</h3>
+              <ul>
+                <li role="menuitem"><a href="#">bis 30 cm Breite</a></li>
+                <li role="menuitem"><a href="#">bis 60 cm Breite</a></li>
+                <li role="menuitem"><a href="#">bis 70 cm Breite</a></li>
+                <li role="menuitem"><a href="#">bis 80 cm Breite</a></li>
+                <li role="menuitem"><a href="#">bis 90 cm Breite</a></li>
+                <li role="menuitem"><a href="#">bis 100 cm Breite</a></li>                            
+              </ul>              
+            </div>
+            <div class="nav-column">
+              <h3>&raquo; Weitere</h3>
+              <ul>
+                <li role="menuitem"><a href="#">Gas-Kochfelder</a></li>                
+                <li role="menuitem"><a href="#">Kocheinheiten/Dominos</a></li>
+                <li role="menuitem"><a href="#">Kochfeld-Zubeh&ouml;r</a></li>
+              </ul>
+            </div>
+            <div class="nav-column">
+              <h3>&raquo; Weitere Kategorie 1</h3>
+              <ul>
+                <li role="menuitem"><a href="#">Unterkategorie 1</a></li>
+                <li role="menuitem"><a href="#">Unterkategorie 2</a></li>
+                <li role="menuitem"><a href="#">Unterkategorie 3</a></li>
+                <li role="menuitem"><a href="#">Unterkategorie 4</a></li>
+                <li role="menuitem"><a href="#">Unterkategorie 5</a></li>
+                <li role="menuitem"><a href="#">Unterkategorie 6</a></li>  
+              </ul>
+              <h3>&raquo; Weitere Kategorie 2</h3>
+              <ul>
+                <li role="menuitem"><a href="#">Unterkategorie 1</a></li>
+                <li role="menuitem"><a href="#">Unterkategorie 2</a></li>
+                <li role="menuitem"><a href="#">Unterkategorie 3</a></li>                                                                          
+              </ul>              
+            </div>  
+                      
+            <div class="nav-column">
+              <ul>
+                <br /><img src="/images/categories/793.jpg" alt="Platzhalter" title="Platzhalter" width="240"/>
+              </ul>              
+              <!--<h3 class="highlight">&raquo; Aktionen:</h3>
+              <ul>
+                <li role="menuitem"><a href="#">Aktionsartikel 1</a></li>
+                <li role="menuitem"><a href="#">Aktionsartikel 2</a></li>
+                <li role="menuitem"><a href="#">Aktionsartikel 3</a></li>
+                <li role="menuitem"><a href="#">Aktionsartikel 4</a></li>                
+              </ul>-->
+            </div>
+                      
+          </div>
+        </li>
+        <li role="menuitem"><a href="#">Dunstabzugshauben</a></li>
+        <li role="menuitem"><a href="#">Geschirrsp&uuml;ler</a></li>
+
+        <li role="menuitem"><a href="#">Grills & BBQ</a></li>
+        <li role="menuitem"><a href="#">Waschtische</a></li>
+        <li role="menuitem"><a href="#">Sp&uuml;len</a></li>                        
+
+      </ul>
+    </div>
+<!------------------------------------------ Megamenu ENDE ------------------------------------------------------------>
+
+
+
+  </div>
+  {* ENDE layout_logo *}
+
+
+  <div class="sidebar_layer"></div>
+  <div id="layout_content" class="cf">
+   {if isset($box_MANUFACTURERS_SLIDER)}
+	{$box_MANUFACTURERS_SLIDER}
+   {/if}                      
+   {if isset($box_MAIN_PROMOTIONS)}
+	{$box_MAIN_PROMOTIONS}
+   {/if}
+
+    {if isset($home) && $home == true}
+      <div id="col_right">
+        <div class="col_right_inner cf">
+          <div id="content_navbar">
+            <ul class="contentnavigation">
+              <li class="sidebar_btn"><span id="sidebar_marker"></span><a href="#"><i class="fa fa-bars"></i><span class="cn_nomobile_text">Men&uuml;</span></a></li>
+              {if isset($box_WISHLIST)}<li class="wishlist">{$box_WISHLIST}</li>{/if}
+            </ul>
+          </div>
+          {if isset($SLIDER)}
+            <div class="content_banner cf">
+              <ul class="bxcarousel_slider">
+              {foreach name=outer item=slider from=$SLIDER}
+                <li>{$slider.IMAGE}</li>
+              {/foreach}
+              </ul>
+            </div>
+          {/if}
+          {if isset($BANNER)}<div class="content_banner cf">{$BANNER}</div>{/if}
+          {if isset($main_content)}{$main_content}{/if}
+          {if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}
+        </div>
+      </div>
+      {* ENDE col_right *}
+      <div id="col_left_overlay">
+        <div id="col_left"{if isset($box_ADMIN)} class="col_left_moremargin"{/if}>
+          <div class="col_left_inner cf">
+            {if isset($box_CATEGORIES)}{$box_CATEGORIES}{/if}                     
+            {if isset($box_LOGIN)}{$box_LOGIN}{/if}
+            
+<div class="ssl_l">
+    <a href="http://www.ascasa-kuechen.de" target="_blank"><img src="{$tpl_path}img_ascasa/ascasa-kuechen-muenchen.png" alt="ascasa K&uuml;chencenter M&uuml;nchen" title="ascasa K&uuml;chencenter M&uuml;nchen"></a><br />
+	 <a href="http://www.ascasa-kuechen.de/rundgang360/" target="_blank"><img src="{$tpl_path}img_ascasa/ascasa-360-grad.png" alt="ascasa 360grad Rundgang" title="ascasa 360grad Rundgang"></a><br />
+  	<a href="http://smeg-outlet-store.de/" target="_blank"><img src="{$tpl_path}img_ascasa/ascasa-smet-outlet.png" alt="ascasa SMEG Outlet Store" title="ascasa SMEG Outlet Store"></a><br />
+  	<a title="IHK Ausbildungsbetrieb 2016" alt="IHK Ausbildungsbetrieb 2016" href="{$tpl_path}img_ascasa/ausbildungsbetrieb_gross.jpg" class="thickbox" rel="ausbildungsbetrieb"><img src="{$tpl_path}img_ascasa/ausbildungsbetrieb.png" alt="IHK Ausbildungsbetrieb 2016" /></a><br /><br />
+
+  <div style="border:0 none; display:block; height:175px; margin:0 0 0 23px; padding:0; position:relative; width:150px;">
+     <a style="border:0 none; display:block; height:166px; left:8px; margin:0; padding:0; position:absolute; text-decoration:none; top:0; width:140px; z-index:10;" href="http://www.idealo.de/preisvergleich/Shop/295971.html#Meinung" target="_blank">
+        <img style="border:0 none; display:block; margin:0; padding:0;" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widget3Box.png" alt="IMG idealo" height="166" width="140">
+      </a>
+     <a style="display:block; height:24px; left:45px; margin:0; padding:0; position:absolute; text-decoration:none; top:155px; width:122px; z-index:20;" href="http://www.idealo.de/preisvergleich/Shop/295971.html#NeueMeinung" target="_blank">
+       <img style="border:0 none; display:block; margin:0; padding:0;" alt="IMG idealo" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widgetButton.png" width="100">
+     </a>
+        <img style="position:absolute; text-decoration:none; left:0; top:140px; z-index:30; border:0 none; display:block; margin:0; padding:0;" alt="IMG idealo" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widgetsPartnerlogo.png" width="40">
+      <br /><br />
+  </div>
+
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.fairness-im-handel.de/" target="_blank"><img height="134" width="127" src="{$tpl_path}img_ascasa/logo-fairness.png" alt="Fairness im Handel" title="Fairness im Handel"></a>
+<!--  billiger.de Partner button with Shop reviews -->
+    <div style="width:200px; text-align:center;">
+      <link type="text/css" href="//www.billiger.de/css/partnerbutton.css" rel="stylesheet"/>
+	   	{*	<p> <a onclick="window.open('https://sealinfo.thawte.com/thawtesplash?form_file=fdf/thawtesplash.fdf&amp;dn=WWW.ASCASA.DE&amp;lang=de', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');" rel="nofollow"><img src="{$tpl_path}img/tempteria-design/ssl-logo.jpg" alt="SSL-Sicherheit" width="70"/></a></p> *}
+    </div>
+</div>            
+        
+            
+            {if isset($box_TRUSTEDSHOPS)}{$box_TRUSTEDSHOPS}{/if}
+          </div>
+        </div>
+      </div>
+      {* ENDE col_left *}
+    {elseif isset($fullcontent) && $fullcontent == true}
+      <div id="col_full" class="cf">
+        {if isset($navtrail)}<div id="breadcrumb"><span class="breadcrumb_info">{#text_here#}</span>{$navtrail|replace:" &raquo; ":"<i class=\"fa fa-angle-right\"></i>"}</div>{/if}
+        {if isset($main_content)}{$main_content}{/if}
+        {if $bestseller}
+          {if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}
+        {/if}
+      </div>
+      {* ENDE col_full *}
+    {else}
+      <div id="col_right">
+        <div class="col_right_inner cf">
+          <div id="content_navbar">
+            <ul class="contentnavigation">
+              <li class="sidebar_btn"><span id="sidebar_marker"></span><a href="#"><i class="fa fa-bars"></i><span class="cn_nomobile_text">Men&uuml;</span></a></li>
+            </ul>
+          </div>
+          {if isset($navtrail)}<div id="breadcrumb"><span class="breadcrumb_info">{#text_here#}</span>{$navtrail|replace:" &raquo; ":"<i class=\"fa fa-angle-right\"></i>"}</div>{/if}
+          {if isset($main_content)}{$main_content}{/if}                  
+          
+          {if $bestseller}{if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}{/if}
+        </div>
+      </div>
+      {* ENDE col_right *}
+      <div id="col_left_overlay">
+        <div id="col_left"{if isset($box_ADMIN)} class="col_left_moremargin"{/if}>
+          <div class="col_left_inner cf">
+            {if isset($box_CATEGORIES)}{$box_CATEGORIES}{/if}
+            {if isset($box_LOGIN)}{$box_LOGIN}{/if}
+            
+<div class="ssl_l">
+    <a href="http://www.ascasa-kuechen.de" target="_blank"><img src="{$tpl_path}img_ascasa/ascasa-kuechen-muenchen.png" alt="ascasa K&uuml;chencenter M&uuml;nchen" title="ascasa K&uuml;chencenter M&uuml;nchen"></a><br />
+	 <a href="http://www.ascasa-kuechen.de/rundgang360/" target="_blank"><img src="{$tpl_path}img_ascasa/ascasa-360-grad.png" alt="ascasa 360grad Rundgang" title="ascasa 360grad Rundgang"></a><br />
+  	<a href="http://smeg-outlet-store.de/" target="_blank"><img src="{$tpl_path}img_ascasa/ascasa-smet-outlet.png" alt="ascasa SMEG Outlet Store" title="ascasa SMEG Outlet Store"></a><br />
+  	<a title="IHK Ausbildungsbetrieb 2016" alt="IHK Ausbildungsbetrieb 2016" href="{$tpl_path}img_ascasa/ausbildungsbetrieb_gross.jpg" class="thickbox" rel="ausbildungsbetrieb"><img src="{$tpl_path}img_ascasa/ausbildungsbetrieb.png" alt="IHK Ausbildungsbetrieb 2016" /></a><br /><br />
+
+  <div style="border:0 none; display:block; height:175px; margin:0 0 0 23px; padding:0; position:relative; width:150px;">
+     <a style="border:0 none; display:block; height:166px; left:8px; margin:0; padding:0; position:absolute; text-decoration:none; top:0; width:140px; z-index:10;" href="http://www.idealo.de/preisvergleich/Shop/295971.html#Meinung" target="_blank">
+        <img style="border:0 none; display:block; margin:0; padding:0;" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widget3Box.png" alt="IMG idealo" height="166" width="140">
+      </a>
+     <a style="display:block; height:24px; left:45px; margin:0; padding:0; position:absolute; text-decoration:none; top:155px; width:122px; z-index:20;" href="http://www.idealo.de/preisvergleich/Shop/295971.html#NeueMeinung" target="_blank">
+       <img style="border:0 none; display:block; margin:0; padding:0;" alt="IMG idealo" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widgetButton.png" width="100">
+     </a>
+        <img style="position:absolute; text-decoration:none; left:0; top:140px; z-index:30; border:0 none; display:block; margin:0; padding:0;" alt="IMG idealo" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widgetsPartnerlogo.png" width="40">
+      <br /><br />
+  </div>
+
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.fairness-im-handel.de/" target="_blank"><img height="134" width="127" src="{$tpl_path}img_ascasa/logo-fairness.png" alt="Fairness im Handel" title="Fairness im Handel"></a>
+<!--  billiger.de Partner button with Shop reviews -->
+    <div style="width:200px; text-align:center;">
+      <link type="text/css" href="//www.billiger.de/css/partnerbutton.css" rel="stylesheet"/>
+	   	{*	<p> <a onclick="window.open('https://sealinfo.thawte.com/thawtesplash?form_file=fdf/thawtesplash.fdf&amp;dn=WWW.ASCASA.DE&amp;lang=de', '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');" rel="nofollow"><img src="{$tpl_path}img/tempteria-design/ssl-logo.jpg" alt="SSL-Sicherheit" width="70"/></a></p> *}
+    </div>
+</div>             
+                         
+            {if isset($box_TRUSTEDSHOPS)}{$box_TRUSTEDSHOPS}{/if}
+          </div>
+        </div>
+      </div>
+      {* ENDE col_left *}
+    {/if}
+  </div>
+  {* ENDE layout_content *}
+
+
+<!-- FULL PAGE FOOTER GRAU-->
+<div id="layout_footer">
+
+
+
+
+<!-- 5SPALTIG-->
+<center>
+<br />
+			<span class="orange"><a class="white" href="http://www.ascasa-kuechen.de" target="_blank"><u>ascasa.de</u></a> - Elektroger&auml;te g&auml;nstig online kaufen. Mit 5 Jahren Garantie, 100 Tagen R&uuml;ckgaberecht, 0%-Finanzierung, 11 Zahlungsarten und Telefon-Hotline bis 22:00 Uhr</a></span>
+<br /><br />
+<div class="container_footer">
+    <div class="row">            
+        <div class="column5">                
+          <div class="contentBox">                
+          <h4><strong>Info-Center</strong></h4>
+            <p>
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=64'}">Wie bestellen</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=7'}">Kontakt</a> / <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=60'}">Hilfe</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=96'}">Produkt-Technik von A - Z</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=21'}">FAQ - die h&auml;ufigsten Fragen</a><br />
+              <span style="margin-left: 0.09em">&nbsp;</span>
+            </p>                
+          </div>                            
+        </div>           
+        <div class="column5">                
+          <div class="contentBox">                               
+          <h4><strong>Sicher Einkaufen</strong></h4>
+            <p>
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=70'}">Widerrufsbelehrung</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=3'}">AGB</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=63'}">Datenschutz</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=95'}>Batterieentsorgung</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=97'}">5 Jahre Garantie</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=70'}">100 Tage R&uuml;ckgaberecht</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=104'}">Widerrufsformular</a><br />
+              <span style="margin-left: 0.09em"></span>
+            </p>                
+          </div>              
+        </div> 
+        <div class="column5">                
+          <div class="contentBox">                               
+          <h4><strong>Zahlung & Versand</strong></h4>
+            <p>
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=102'}">Versandbedingungen</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=1'}">Versandkosten</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=11'}">Zahlungsarten</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=105'}">Bestellungen aus der Schweiz</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=108'}">Lieferzeiten Inland / Ausland</a><br />
+              <span style="margin-left: 0.09em"></span>
+            </p>                
+          </div>              
+        </div>
+        <div class="column5">                
+          <div class="contentBox">                               
+          <h4><strong>ascasa</strong></h4>
+            <p>
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=9'}">Wer wir sind</a><br />
+            <a class="white" href="{'Hersteller.html'|xtc_href_link:''}">Unsere Hersteller</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=23'}">Jobs</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=101'}">Keine Newsletter</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=4'}">Impressum</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=103'}">Charity</a><br />
+              <span style="margin-left: 0.09em"></span>
+            </p>                
+          </div>              
+        </div>        
+        <div class="columnR5x">              
+          <div class="contentBox">                
+          <h4><strong>Services & Leistungen</strong></h4>
+            <p>
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=72'}">Kundendienst</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=8'}">&Uuml;bersicht</a><br /><br />
+            <a href="https://www.facebook.com/ascasa.de/" target="_blank"><img src="{$tpl_path}img_ascasa/facebook.png" alt="" width="34" height="34" border="0"></a>&nbsp;&nbsp;<a href="https://plus.google.com/+AscasaDe/" target="_blank"><img src="{$tpl_path}img_ascasa/google.png" alt="" width="34" height="34" border="0"></a>
+          
+            </p>              
+          </div>              
+        </div>
+    </div>            
+  <div style="border-top: #666666 solid 1px; margin-bottom: -15px; "></div><br />
+</div>
+			<span class="smallfont"><span class="darkgrey">&copy; 2019 ascasa.de </span>| <a class="white" href="http://www.ascasa-kuechen.de" target="_blank">ascasa K&uuml;chen M&uuml;nchen</a> | design & code customized by <a class="white" href="http://www.brainsquad.de" target="_blank">brainsquad werbeagentur m&uuml;nchen</a></span>
+      <br /><br />
+</center>
+<!-- // 5SPALTIG-->
+</div>  
+{* BOF - COOKIE - Richtlinie *}
+<script>
+$(function() {ldelim}
+cookieChoices.showCookieConsentBar('{#cookiechoices_text#}','{#cookiechoices_button#}','{#cookiechoices_more#}','{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=63'}');
+{rdelim});
+</script>
+{* COOKIE - Richtlinie *}
+
+
+<!-- // FULL PAGE FOOTER GRAU-->
+
+</div>
+{* ENDE layout_wrap *}
+
+{if ($smarty.const.TRACKING_COUNT_ADMIN_ACTIVE == 'true' && $smarty.session.customers_status.customers_status_id == '0') || $smarty.session.customers_status.customers_status_id != '0'}
+  {if $smarty.const.TRACKING_PIWIK_ACTIVE == 'true'}
+    {piwik url=$smarty.const.TRACKING_PIWIK_LOCAL_PATH id=$smarty.const.TRACKING_PIWIK_ID goal=$smarty.const.TRACKING_PIWIK_GOAL}
+  {/if}
+  {if $smarty.const.TRACKING_GOOGLEANALYTICS_ACTIVE == 'true'}
+    {googleanalytics account=$smarty.const.TRACKING_GOOGLEANALYTICS_ID}
+  {/if}
+  {if $smarty.const.TRACKING_FACEBOOK_ACTIVE == 'true'}
+    {facebook id=$smarty.const.TRACKING_FACEBOOK_ID}
+  {/if}
+{/if}
+{if $smarty.const.GOOGLE_CERTIFIED_SHOPS_MERCHANT_ACTIVE == 'true'}
+  {googlecertificate subaccount=$smarty.const.GOOGLE_SHOPPING_ID account=$smarty.const.GOOGLE_TRUSTED_ID}
+{/if}
+{/if}

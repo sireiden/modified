@@ -1,0 +1,112 @@
+/* mini reset */
+.nav_mobile,
+.nav_mobile a,
+.nav_mobile form,
+.nav_mobile input,
+.nav_mobile li,
+.nav_mobile ul {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.nav_mobile a {
+  text-decoration: none;
+}
+.nav_mobile li {
+  list-style: none;
+}
+
+/* menu container */
+.nav_mobile,
+input_mobile {
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+.nav_mobile {
+  cursor: default;
+  display: inline-block;
+  position: relative;
+  z-index: 500;
+}
+
+/* menu list */
+.nav_mobile > li {
+  float: left;
+}
+
+/* menu links */
+.nav_mobile > li > a {
+  background: #ffffff;
+  border-left: 0px solid #eaeaea;
+  border-right: 0px solid #eaeaea;
+  color: #5c5d61;
+  display: block;
+  font-weight: normal;
+  line-height: 3.5;
+  padding: 0 1.0em;
+  position: relative;
+  text-shadow: 0 0 0px rgba(0, 0, 0, 0.35);
+  transition: all .3s ease;
+  z-index: 510;    
+}
+.nav_mobile > li > a:focus,
+.nav_mobile > li:hover > a {
+  background: #d4d4d4;
+}
+.nav_mobile > li:first-child > a {
+  border-left: none;
+  border-radius: 0px 0 0 0px;
+}
+
+/* menu dropdown */
+.mega-menu_mobile {
+  background: #d4d4d4;  
+  border: 0px solid #ddd;
+  border-radius: 15 15 15px 15px;
+  opacity: 0;
+  position: absolute;
+  transition: all .3s ease .15s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 520;  
+}
+li:hover > .mega-menu_mobile {
+  opacity: 1;
+  overflow: visible;
+  visibility: visible;
+}
+
+/* menu content */
+.nav-column_mobile {
+  float: left;
+  padding: 1.5%;
+  padding-top: 0px;
+  width: 100%; 
+}
+.nav-column_mobile a {
+  color: #66676b;
+  font-size: 15px;
+  display: block;
+  font-weight: normal;
+  line-height: 1.60;
+}
+.nav-column_mobile a:hover {
+  color: #ffffff;
+  background: #ff741c;
+  padding-left: 0px;  
+}
+
+/* Kategorie-Überschriften */
+h6 {
+  color: #372f2b;
+  font-size: .95em;
+  font-weight: bold;
+  line-height: 1.15;
+  margin: 1.25em 0 .75em;
+  text-transform: uppercase;
+}
+.highlight {
+  color: #ff741c;  
+}

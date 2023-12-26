@@ -1,0 +1,5 @@
+Chers Clients,
+
+Veuillez cliquer sur le lien suivant pour effectuer le paiement : {$url}
+
+[SIGNATUR]

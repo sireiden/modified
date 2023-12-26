@@ -1,0 +1,225 @@
+{config_load file="$language/lang_$language.conf" section="index"}
+{config_load file="lang_`$language`.custom"}
+{if isset($box_ADMIN)}<div class="adminspacer"></div>{$box_ADMIN}{/if}
+<div class="sidebar_closer{if isset($box_ADMIN)} sidebar_moremargin{/if}"><i class="fa fa-times"></i></div>
+
+<div id="layout_wrap">
+<center>
+<div class="sidebar_layer"></div>
+
+<!----------------------------------------------- CONTENT NAVIGATION EINBLENDUNG---------------------------------------->
+<div id="layout_content" class="cf">
+      <div id="col_right">    
+        <div class="col_right_inner cf">
+          <div id="content_navbar">
+            <ul class="contentnavigation">
+              <li class="sidebar_btn"><span id="sidebar_marker"></span><a href="#"><i class="fa fa-bars"></i><span class="cn_nomobile_text">Men&uuml;</span></a></li>
+            </ul>
+          </div>                      
+        </div>
+      </div>  
+      {* ENDE col_right *}      
+      <div id="col_left_overlay">
+        <div id="col_left"{if isset($box_ADMIN)} class="col_left_moremargin"{/if}>
+          <div class="col_left_inner cf">
+            {if isset($box_CATEGORIES)}{$box_CATEGORIES}{/if}                     
+            {if isset($box_LOGIN)}{$box_LOGIN}{/if}          
+          </div>
+        </div>
+      </div>
+      {* ENDE col_left *}
+  </div>
+    {* ENDE layout_content *}
+<!----------------------------------------------- CONTENT NAVIGATION EINBLENDUNG---------------------------------------->
+             
+          <div class="container" style="background-color: #000000; padding: 5px; padding-top: 8px; ">
+            <div style="
+            float: left; width: 70.00%;" align="left" >
+        		<span style="font-size: 18px; color: #939393">12 Artikel im</span>&nbsp;<span style="font-size: 18px; color: #dddddd"><a class="white" href="#">Warenkorb</a></span>
+            </div>
+            <div style="text-align: right;" >
+        			<span style="font-size: 18px; color: #dddddd;">123456 EUR</span>
+            </div>         
+        </div>       
+        
+<!----------------------------------------------HEADER LOGO NEU ANFANG ------------------------------------------------->  
+        <div class="container">
+            <div style="background-color: #3d3d3d; padding-top: 5px;" align="left"  >
+              <img src="/templates/_mobile/img_mobile/logo_header.png" alt="ascasa" title="ascasa" height="auto" width="100%" border="0" />
+            </div>
+        </div>                     
+<!----------------------------------------------HEADER LOGO NEU ENDE --------------------------------------------------->   
+
+
+<!----------------------------------------------- SLIDER ANFANG -------------------------------------------------------->
+        <div class="container">
+        				<div class="columnsContainer">
+        					<div class="wideColumn"> 
+                        	{if isset($box_MAIN_PROMOTIONS)}
+								{$box_MAIN_PROMOTIONS}
+		   					{/if}<br />
+                        <span class="white"><strong>Elektroger&auml;te g&uuml;nstig online kaufen. Mit 5 Jahren Garantie, 100 Tagen R&uuml;ckgaberecht, 0%-Finanzierung. 
+                        11 Zahlungsarten und Telefon-Hotline bis 22:00 Uhr</strong><br /></span>       				                         					                                                          
+                  </div>          
+        				</div>
+        </div>
+<!----------------------------------------------- SLIDER ENDE ---------------------------------------------------------->
+
+<!----------------------------------------------- HERSTELLER + SUCHE --------------------------------------------------->            
+        <div class="container">    
+            <!-- HERSTELLER FELD -->
+            <div class="border_hersteller">          
+              <div style="
+              float: left; width: 65px;" align="left" >
+          		<span style="font-size: 18px; color: #ffffff;"><a class="button_2" href="#">&raquo;</a></span>          		
+              </div>                                 
+              <div style="text-align: left; padding-top:13px; padding-bottom: 10px;" >
+                  <span style="font-size: 15px; color: #000000"><strong><a class="white" href="#">Hersteller / Marke ausw&auml;hlen</a></strong></span>
+              </div>     
+            </div>
+            <br />             
+            <!-- SUCHFELD -->
+            <div class="border_suche">          
+              <div style="
+              float: left; width: 70.00%;" align="left" >
+          		<span style="font-size: 18px; color: #ffffff"><input type="text" id="shopdurchsuchen" name="shopdurchsuchen" value="Suchbegriff eingeben"></span>
+              </div>
+              <div style="text-align: right;" >
+          			<span style="font-size: 18px; color: #ffffff;"><a class="button_1" href="#"><span>&#128269;</span></a></span>
+              </div>     
+            </div>            
+			</div>
+<!----------------------------------------------- FORMULARE + SUCHE ---------------------------------------------------->
+
+<br />
+
+<!----------------------------------------------- CONTENT MAIN ANFANG -------------------------------------------------->
+        <div class="container">
+            <!-- CONTENT SHOP -->
+            <div class="border_content">           
+          {if isset($main_content)}{$main_content}{/if}
+          {if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}         
+            </div>
+        </div>   
+<!----------------------------------------------- CONTENT MAIN ENDE ---------------------------------------------------->
+
+
+
+
+
+
+<!----------------------------------------------- FOOTER ANFANG -------------------------------------------------------->
+<div class="line" style="background-color: #3e3e3e;" >                                     
+  <center><br />                          
+    <div class="container" >
+    			
+      <div class="columnsContainer">                                        
+        <div align="left">                       	                                                 
+            <div class="row">                             
+              <div class="column">                
+                <span class="headline_xxl"><strong>Info-Center</strong></span>
+                <br />         
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=64'}">Wie bestellen</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=7'}">Kontakt</a> / <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=60'}">Hilfe</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=96'}">Produkt-Technik von A - Z</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=21'}">FAQ - die h&auml;ufigsten Fragen</a><br /><br />              
+              </div>                             
+              <div class="column">                
+                <span class="headline_xxl"><strong>Sicher Einkaufen</strong></span>
+                <br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=70'}">Widerrufsbelehrung</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=3'}">AGB</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=63'}">Datenschutz</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=95'}>Batterieentsorgung</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=97'}">5 Jahre Garantie</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=70'}">100 Tage R&uuml;ckgaberecht</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=104'}">Widerrufsformular</a><br />                            
+                <br />              
+              </div>              
+              <div class="column">
+                <span class="headline_xxl"><strong>Zahlung & Versand</strong></span><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=102'}">Versandbedingungen</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=1'}">Versandkosten</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=11'}">Zahlungsarten</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=105'}">Bestellungen aus der Schweiz</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=108'}">Lieferzeiten Inland / Ausland</a><br /><br />                        
+              </div>            
+            </div>                                  
+            <!-- 3spaltig ---------------------------------------------------------------------------------------------->                                            
+            <div class="row">                             
+              <div class="column">                
+                <span class="headline_xxl"><strong>ascasa</strong></span>
+                <br />                 
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=9'}">Wer wir sind</a><br />
+            <a class="white" href="{'Hersteller.html'|xtc_href_link:''}">Unsere Hersteller</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=23'}">Jobs</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=101'}">Keine Newsletter</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=4'}">Impressum</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=103'}">Charity</a><br /><br />              
+              </div>                             
+              <div class="column">                
+                <span class="headline_xxl"><strong>Services & Leistungen</strong>
+                </span>
+                <br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=72'}">Kundendienst</a><br />
+            <a class="white" href="{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=8'}">&Uuml;bersicht</a><br /><br />
+            <a href="https://www.facebook.com/ascasa.de/" target="_blank"><img src="/templates/_mobile/img_mobile/mobile_facebook.png" alt="" width="70%" border="0"></a>                         
+                <br /><br />              
+              </div>              
+              <div class="column">
+                <span class="headline_xxl">&copy; 2019 ascasa.de</span><br />
+                  design & code customized by
+                  <br /><a class="white" target="_blank" href="http://www.brainsquad.de">brainsquad werbeagentur</a><br /><br />
+
+                    <a target="_blank" href="#"><img src="/templates/_mobile/img_mobile/mobilebanner.png" alt="Mobile-Banner" title="Mobile-Banner" width="70%"></a><br />
+                    <a target="_blank" href="#"><img src="/templates/_mobile/img_mobile/mobilebanner.png" alt="Mobile-Banner" title="Mobile-Banner" width="70%"></a><br />
+                    <a target="_blank" href="#"><img src="/templates/_mobile/img_mobile/mobilebanner.png" alt="Mobile-Banner" title="Mobile-Banner" width="70%"></a><br />                            
+              </div>            
+            </div>
+          <br />                                                                                               
+        </div>                                                               
+      </div>
+    
+    &nbsp;                                               
+    </div>
+                
+  </center>
+  
+  
+                     
+</div> 
+<!----------------------------------------------- FOOTER ENDE ----------------------------------------------------------> 
+
+
+<!-- FULL PAGE FOOTER GRAU-->
+
+
+{* BOF - COOKIE - Richtlinie *}
+<script>
+$(function() {ldelim}
+cookieChoices.showCookieConsentBar('{#cookiechoices_text#}','{#cookiechoices_button#}','{#cookiechoices_more#}','{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=63'}');
+{rdelim});
+</script>
+{* COOKIE - Richtlinie *}
+
+<!-- // FULL PAGE FOOTER GRAU-->
+<center>
+</div>
+
+</div>
+{* ENDE layout_wrap *}
+
+{if ($smarty.const.TRACKING_COUNT_ADMIN_ACTIVE == 'true' && $smarty.session.customers_status.customers_status_id == '0') || $smarty.session.customers_status.customers_status_id != '0'}
+  {if $smarty.const.TRACKING_PIWIK_ACTIVE == 'true'}
+    {piwik url=$smarty.const.TRACKING_PIWIK_LOCAL_PATH id=$smarty.const.TRACKING_PIWIK_ID goal=$smarty.const.TRACKING_PIWIK_GOAL}
+  {/if}
+  {if $smarty.const.TRACKING_GOOGLEANALYTICS_ACTIVE == 'true'}
+    {googleanalytics account=$smarty.const.TRACKING_GOOGLEANALYTICS_ID}
+  {/if}
+  {if $smarty.const.TRACKING_FACEBOOK_ACTIVE == 'true'}
+    {facebook id=$smarty.const.TRACKING_FACEBOOK_ID}
+  {/if}
+{/if}
+{if $smarty.const.GOOGLE_CERTIFIED_SHOPS_MERCHANT_ACTIVE == 'true'}
+  {googlecertificate subaccount=$smarty.const.GOOGLE_SHOPPING_ID account=$smarty.const.GOOGLE_TRUSTED_ID}
+{/if}

@@ -1,0 +1,25 @@
+<h1>Herstellerübersicht</h1>
+<div class="subcats cf">
+	{foreach name=aussen item=manufacturers from=$MANUFACTURERS}
+	    <div class="subcatlist">
+	    	<div class="subcatlist_inner cf">
+	    	
+			    {if $manufacturers.clean_image != ''}
+			    	<span class="subcat_image"><span class="subcat_image_inner cf"><a href="{$manufacturers.url}"><img src="{$manufacturers.clean_image}" alt="{$manufacturers.manufacturers_name}" style="width:100px" /></a></span></span>
+			    	<br />
+			    {/if}
+			    <span class="subcat_title"><span class="subcat_title_inner">
+				    <a href="{$manufacturers.url}">{$manufacturers.manufacturers_name}</a>
+				    <br>
+				    {foreach name=innen item=manufacturers_page from=$manufacturers.pages}
+				        {if $manufacturers_page.page_title != ''}
+				        	<a style="text-decoration:underline" href="{$manufacturers_page.url}"><strong>{$manufacturers_page.page_title}</strong></a>
+				        	<br />
+				        {/if}
+				    {/foreach}
+				</span></span>   
+		    </div>
+	  	</div>
+	{/foreach}
+</div>
+

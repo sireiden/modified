@@ -1,0 +1,71 @@
+{config_load file="$language/amazon.conf" section="checkout_amazon"}
+{config_load file="$language/lang_$language.conf" section="checkout_payment"}
+
+{if $ERROR}
+    <div class="errorBox">{$ERROR}</div>
+{/if}
+<h1>
+	{#heading_checkout#}
+</h1>
+{if $SEVERE_ERROR}
+    <div class="errorBox">{$SEVERE_ERROR}</div>
+{else}
+    {if $success}
+        <div>{$smarty.const.AMZ_PAY_EXISTING_ORDER_SUCCESS}</div>
+    {else}
+        <div>{$smarty.const.AMZ_PAY_EXISTING_ORDER_INTRO}</div>
+        <div id="amz-pay-button-wr"></div>
+        <div id="walletWidgetDiv" class="walletPageWidget hide-if-not-logged-in"></div>
+        <div class="amzBox amz-pay-only hide-if-not-logged-in">
+		    <div class="cba_header_wo_a">{#order_summary#}</div>
+		    <div id="AmazonProducts">
+		        <table>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td align="right">{$smarty.const.AMZ_SINGLE_PRICE}</td>
+                        <td align="right">{$smarty.const.AMZ_TOTAL_PRICE}</td>
+                    </tr>
+                    {foreach from=$order->products item=product}
+                        <tr class="cba_item_list" valign="top">
+                           <td>
+                               <div>{$product.qty} x {$product.name}</div>
+                           </td>
+                           <td align="right">
+                               {$product.price|formatCurrency:$order}
+                           </td>
+                           <td align="right">
+                               {$product.final_price|formatCurrency:$order}
+                           </td>
+                        </tr>
+                    {/foreach}
+                </table>
+		    </div>
+		    <div id="AmazonOrderTotals">
+		        <table>
+		            {foreach from=$order->totals item=total}
+                        <tr class="amzOtLine" valign="top">
+                           <td class="amzOtTitle">
+                               {$total.title}
+                           </td>
+                           <td class="amzOtPrice">
+                               {$total.text}
+                           </td>
+                        </tr>
+                    {/foreach}
+                </table>
+		    </div>
+		    
+		    <div style="clear:both; float:right; width: 45%; text-align:right; display:none;" id="amazon_button">
+                <form method="POST" action="{'checkout_amazon_pay.php'|xtc_href_link:"amz=1&action=confirm_payment&order_id=$order_id":'SSL'}"  onsubmit="disableAmzWidget($('#walletWidgetDiv'));">
+                    <input type="hidden" name="order_reference_id" id="order_reference_id" value="" />
+                    {$BUTTON_CONTINUE}
+                </form>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div style="margin-top:10px; float:left;">
+            <a href="{'checkout_amazon.php'|xtc_href_link:'amazon_action=cancelOrder':'SSL'}">{$smarty.const.AMZ_CANCEL_ORDER_FROM_WALLET}</a>
+        </div>
+        
+    {/if}
+{/if}

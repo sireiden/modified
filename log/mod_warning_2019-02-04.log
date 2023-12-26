@@ -1,0 +1,83 @@
+[04-02-2019 12:09:35] E_WARNING	: LoggingManager: mysqli_connect(): (HY000/1045): Access denied for user 'ascasa_usr'@'localhost' (using password: NO) in File: /home/ascasa/public_html/inc/db_functions_mysqli.inc.php on Line: 91
+[04-02-2019 12:09:35] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/install_step1.php called at Line 86
+[04-02-2019 12:09:35] E_USER_WARNING	: LoggingManager: 1045 - Access denied for user 'ascasa_usr'@'localhost' (using password: NO)<br/><br/> in File: /home/ascasa/public_html/inc/db_functions_mysqli.inc.php on Line: 161
+[04-02-2019 12:09:35] E_USER_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/install_step1.php called at Line 86
+[04-02-2019 12:09:35] E_WARNING	: LoggingManager: mysqli_close() expects parameter 1 to be mysqli, boolean given in File: /home/ascasa/public_html/inc/db_functions_mysqli.inc.php on Line: 22
+[04-02-2019 12:09:35] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_bottom.php called at Line 29
+[04-02-2019 12:09:35] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 343
+[04-02-2019 12:11:35] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:35] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:35] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:36] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:37] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/admin_VZZMBNHE8B/includes/db_actions.php called at Line 283
+[04-02-2019 12:11:38] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/install_step1.php called at Line 166
+[04-02-2019 12:13:48] E_WARNING	: LoggingManager: mb_detect_encoding(): Illegal argument in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 46
+[04-02-2019 12:13:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/install_step2.php called at Line 342
+[04-02-2019 12:13:48] E_WARNING	: LoggingManager: mb_convert_encoding(): Illegal character encoding specified in File: /home/ascasa/public_html/inc/html_encoding.php on Line: 50
+[04-02-2019 12:13:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/install_step2.php called at Line 342

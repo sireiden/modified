@@ -1,0 +1,7 @@
+<div class="content_banner cf">
+  <ul class="bxcarousel_main_promotions">
+  {foreach name=outer item=promotion from=$promotions}
+    <li><a href="{$promotion.link}"><img src="{$promotion.image}" alt="{$promotion.name}"></a></li>
+  {/foreach}
+  </ul>
+</div>

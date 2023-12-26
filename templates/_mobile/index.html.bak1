@@ -1,0 +1,143 @@
+{config_load file="$language/lang_$language.conf" section="index"}
+{config_load file="lang_`$language`.custom"}
+{if isset($box_ADMIN)}<div class="adminspacer"></div>{$box_ADMIN}{/if}
+<div class="sidebar_closer{if isset($box_ADMIN)} sidebar_moremargin{/if}"><i class="fa fa-times"></i></div>
+
+<div id="layout_wrap">
+
+<!--  <div class="sidebar_layer"></div>-->
+  
+<!-- Sidebar Navigation Layer --------------------------------------------------------------------------->  
+  <div id="layout_content" class="cf">
+
+<!----------------------------------------------- SLIDER NEU ANFANG ---------------------------------------------------->
+<div class="container">
+               <div class="callbacks_container">
+                <ul class="rslides" id="slider4">
+                  <li>
+                    <a target="_blank" href="#"><img src="/img_mobile/header.jpg" alt="Header" title="Header"></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="#"><img src="/img_mobile/header2.jpg" alt="Header" title="Header"></a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="#"><img src="/img_mobile/header3.jpg" alt="Header" title="Header"></a>
+                  </li>                                                                        
+                </ul>
+              </div> 
+
+</div>
+<!----------------------------------------------- SLIDER NEU ENDE ------------------------------------------------------>
+
+    {if isset($home) && $home == true}
+      <div id="col_right">
+        <div class="col_right_inner cf">
+          <div id="content_navbar">
+            <ul class="contentnavigation">
+              <li class="sidebar_btn"><span id="sidebar_marker"></span><a href="#"><i class="fa fa-bars"></i><span class="cn_nomobile_text">Men&uuml;</span></a></li>
+              {if isset($box_WISHLIST)}<li class="wishlist">{$box_WISHLIST}</li>{/if}
+            </ul>
+          </div>
+                 
+          {if isset($BANNER)}<div class="content_banner cf">{$BANNER}</div>{/if}
+          {if isset($main_content)}{$main_content}{/if}
+          {if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}
+        </div>
+      </div>
+      {* ENDE col_right *}
+      <div id="col_left_overlay">
+        <div id="col_left"{if isset($box_ADMIN)} class="col_left_moremargin"{/if}>
+          <div class="col_left_inner cf">
+            {if isset($box_CATEGORIES)}{$box_CATEGORIES}{/if}                     
+            {if isset($box_LOGIN)}{$box_LOGIN}{/if}          
+          </div>
+        </div>
+      </div>
+      {* ENDE col_left *}
+    {elseif isset($fullcontent) && $fullcontent == true}
+      <div id="col_full" class="cf">
+        {if isset($navtrail)}<div id="breadcrumb"><span class="breadcrumb_info">{#text_here#}</span>{$navtrail|replace:" &raquo; ":"<i class=\"fa fa-angle-right\"></i>"}</div>{/if}
+        {if isset($main_content)}{$main_content}{/if}
+        {if $bestseller}
+          {if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}
+        {/if}                                        
+      </div>
+      {* ENDE col_full *}
+    {else}
+      <div id="col_right">
+        <div class="col_right_inner cf">
+          <div id="content_navbar">
+            <ul class="contentnavigation">
+              <li class="sidebar_btn"><span id="sidebar_marker"></span><a href="#"><i class="fa fa-bars"></i><span class="cn_nomobile_text">Men&uuml;</span></a></li>
+            </ul>
+          </div>
+
+          {if isset($main_content)}{$main_content}{/if}                  
+          {if $bestseller}{if isset($box_BESTSELLERS)}{$box_BESTSELLERS}{/if}{/if}
+        </div>
+      </div>
+      {* ENDE col_right *} 
+      <div id="col_left_overlay">
+        <div id="col_left"{if isset($box_ADMIN)} class="col_left_moremargin"{/if}>
+          <div class="col_left_inner cf">
+            {if isset($box_CATEGORIES)}{$box_CATEGORIES}{/if}
+            {if isset($box_LOGIN)}{$box_LOGIN}{/if}
+            
+      <div class="ssl_l">
+        <div style="border:0 none; display:block; height:175px; margin:0 0 0 23px; padding:0; position:relative; width:150px;">
+           <a style="border:0 none; display:block; height:166px; left:8px; margin:0; padding:0; position:absolute; text-decoration:none; top:0; width:140px; z-index:10;" href="http://www.idealo.de/preisvergleich/Shop/295971.html#Meinung" target="_blank">
+              <img style="border:0 none; display:block; margin:0; padding:0;" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widget3Box.png" alt="IMG idealo" height="166" width="140">
+            </a>
+           <a style="display:block; height:24px; left:45px; margin:0; padding:0; position:absolute; text-decoration:none; top:155px; width:122px; z-index:20;" href="http://www.idealo.de/preisvergleich/Shop/295971.html#NeueMeinung" target="_blank">
+             <img style="border:0 none; display:block; margin:0; padding:0;" alt="IMG idealo" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widgetButton.png" width="100">
+           </a>
+              <img style="position:absolute; text-decoration:none; left:0; top:140px; z-index:30; border:0 none; display:block; margin:0; padding:0;" alt="IMG idealo" src="https://img.idealo.com/folder/Shop/295/2959/295971/s1_widgetsPartnerlogo.png" width="40">
+            <br /><br />
+        </div>
+      </div>             
+                         
+            {if isset($box_TRUSTEDSHOPS)}{$box_TRUSTEDSHOPS}{/if}
+          </div>
+        </div>
+      </div>
+      {* ENDE col_left *}
+    {/if}   
+  </div>
+  {* ENDE layout_content *}
+
+
+
+
+
+<!-- FULL PAGE FOOTER GRAU-->
+
+{* BOF - COOKIE - Richtlinie *}
+<script>
+$(function() {ldelim}
+cookieChoices.showCookieConsentBar('{#cookiechoices_text#}','{#cookiechoices_button#}','{#cookiechoices_more#}','{$smarty.const.FILENAME_CONTENT|xtc_href_link:'coID=63'}');
+{rdelim});
+</script>
+{* COOKIE - Richtlinie *}
+
+<!-- // FULL PAGE FOOTER GRAU-->
+
+</div>
+
+
+</div>
+{* ENDE layout_wrap *}
+
+{if ($smarty.const.TRACKING_COUNT_ADMIN_ACTIVE == 'true' && $smarty.session.customers_status.customers_status_id == '0') || $smarty.session.customers_status.customers_status_id != '0'}
+  {if $smarty.const.TRACKING_PIWIK_ACTIVE == 'true'}
+    {piwik url=$smarty.const.TRACKING_PIWIK_LOCAL_PATH id=$smarty.const.TRACKING_PIWIK_ID goal=$smarty.const.TRACKING_PIWIK_GOAL}
+  {/if}
+  {if $smarty.const.TRACKING_GOOGLEANALYTICS_ACTIVE == 'true'}
+    {googleanalytics account=$smarty.const.TRACKING_GOOGLEANALYTICS_ID}
+  {/if}
+  {if $smarty.const.TRACKING_FACEBOOK_ACTIVE == 'true'}
+    {facebook id=$smarty.const.TRACKING_FACEBOOK_ID}
+  {/if}
+{/if}
+{if $smarty.const.GOOGLE_CERTIFIED_SHOPS_MERCHANT_ACTIVE == 'true'}
+  {googlecertificate subaccount=$smarty.const.GOOGLE_SHOPPING_ID account=$smarty.const.GOOGLE_TRUSTED_ID}
+{/if}

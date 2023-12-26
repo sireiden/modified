@@ -1,0 +1,5 @@
+Gentile cliente,
+
+Clicca sul link seguente per attivare il pagamento: {$url}
+
+[SIGNATUR]

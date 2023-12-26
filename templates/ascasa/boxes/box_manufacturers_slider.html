@@ -1,0 +1,20 @@
+<div id="layout_markenslider">
+<center>      
+  <div class="container">
+    <br />
+
+      <div class="content_banner cf">
+        <!--div id="manufacturers_slider_prev" style="float:left"></div-->
+        <div style="width:100%;float:left">
+        <ul class="bxcarousel_manufacturers_slider">
+        {foreach name=outer item=manufacturer from=$manufacturers}
+          <li><a href="{$manufacturer.link}"><img src="{$manufacturer.image}" alt="{$manufacturer.name}"></a></li>
+        {/foreach}
+        </ul>
+        </div>
+        <!--div id="manufacturers_slider_next" style="float:left"></div--> 
+      </div>
+
+   </div>
+</center>   
+</div>

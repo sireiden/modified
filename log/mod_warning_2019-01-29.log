@@ -1,0 +1,213 @@
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 36
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 90
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant DB_SERVER_CHARSET - assumed 'DB_SERVER_CHARSET' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 45
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 90
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant FILENAME_DEFAULT - assumed 'FILENAME_DEFAULT' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/inc/xtc_href_link.inc.php on Line: 33
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 98
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_FIRST_NAME_MIN_LENGTH - assumed 'ENTRY_FIRST_NAME_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 159
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_LAST_NAME_MIN_LENGTH - assumed 'ENTRY_LAST_NAME_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 160
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_EMAIL_ADDRESS_MIN_LENGTH - assumed 'ENTRY_EMAIL_ADDRESS_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 161
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_STREET_ADDRESS_MIN_LENGTH - assumed 'ENTRY_STREET_ADDRESS_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 164
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_POSTCODE_MIN_LENGTH - assumed 'ENTRY_POSTCODE_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 165
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_CITY_MIN_LENGTH - assumed 'ENTRY_CITY_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 166
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_PASSWORD_MIN_LENGTH - assumed 'ENTRY_PASSWORD_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 167
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_PASSWORD_MIN_LENGTH - assumed 'ENTRY_PASSWORD_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 173
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 636
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 20
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 641
+[29-01-2019 19:09:47] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 20
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 570
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 571
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 572
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 573
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 574
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 575
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 578
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 579
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 580
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 581
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 584
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 585
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 586
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 587
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 588
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 589
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 590
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 591
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 592
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 593
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 594
+[29-01-2019 19:09:48] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 36
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 90
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant DB_SERVER_CHARSET - assumed 'DB_SERVER_CHARSET' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 45
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 90
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant FILENAME_DEFAULT - assumed 'FILENAME_DEFAULT' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/inc/xtc_href_link.inc.php on Line: 33
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 98
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_FIRST_NAME_MIN_LENGTH - assumed 'ENTRY_FIRST_NAME_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 159
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_LAST_NAME_MIN_LENGTH - assumed 'ENTRY_LAST_NAME_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 160
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_EMAIL_ADDRESS_MIN_LENGTH - assumed 'ENTRY_EMAIL_ADDRESS_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 161
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_STREET_ADDRESS_MIN_LENGTH - assumed 'ENTRY_STREET_ADDRESS_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 164
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_POSTCODE_MIN_LENGTH - assumed 'ENTRY_POSTCODE_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 165
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_CITY_MIN_LENGTH - assumed 'ENTRY_CITY_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 166
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_PASSWORD_MIN_LENGTH - assumed 'ENTRY_PASSWORD_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 167
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_PASSWORD_MIN_LENGTH - assumed 'ENTRY_PASSWORD_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 173
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 636
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 20
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 641
+[29-01-2019 19:11:25] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 20
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 570
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 571
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 572
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 573
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 574
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 575
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 578
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 579
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 580
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 581
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 584
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 585
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 586
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 587
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 588
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 589
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 590
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 591
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 592
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 593
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 594
+[29-01-2019 19:11:26] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 36
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 90
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant DB_SERVER_CHARSET - assumed 'DB_SERVER_CHARSET' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 45
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 90
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant FILENAME_DEFAULT - assumed 'FILENAME_DEFAULT' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/inc/xtc_href_link.inc.php on Line: 33
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/includes/application_top.php called at Line 98
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #1 - /home/ascasa/public_html/_installer/index.php called at Line 14
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_FIRST_NAME_MIN_LENGTH - assumed 'ENTRY_FIRST_NAME_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 159
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_LAST_NAME_MIN_LENGTH - assumed 'ENTRY_LAST_NAME_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 160
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_EMAIL_ADDRESS_MIN_LENGTH - assumed 'ENTRY_EMAIL_ADDRESS_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 161
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_STREET_ADDRESS_MIN_LENGTH - assumed 'ENTRY_STREET_ADDRESS_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 164
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_POSTCODE_MIN_LENGTH - assumed 'ENTRY_POSTCODE_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 165
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_CITY_MIN_LENGTH - assumed 'ENTRY_CITY_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 166
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_PASSWORD_MIN_LENGTH - assumed 'ENTRY_PASSWORD_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 167
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant ENTRY_PASSWORD_MIN_LENGTH - assumed 'ENTRY_PASSWORD_MIN_LENGTH' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/lang/german.php on Line: 173
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 17
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 636
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 20
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/includes/external/smarty/smarty_3/Smarty.class.php on Line: 641
+[29-01-2019 19:12:03] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 20
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 570
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 571
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 572
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 573
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 574
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 575
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 578
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 579
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 580
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 581
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 584
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 585
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 586
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 587
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 588
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 589
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 590
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 591
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 592
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 593
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Use of undefined constant CURRENT_TEMPLATE - assumed 'CURRENT_TEMPLATE' (this will throw an Error in a future version of PHP) in File: /home/ascasa/public_html/_installer/includes/delete_files.php on Line: 594
+[29-01-2019 19:12:04] E_WARNING	: LoggingManager: Backtrace #0 - /home/ascasa/public_html/_installer/index.php called at Line 36

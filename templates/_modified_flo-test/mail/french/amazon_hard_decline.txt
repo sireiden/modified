@@ -1,0 +1,7 @@
+
+Cher client,
+
+Malheureusement Amazon Pay n’a pas pu traier le paiement pour votre commande auprès{if $STORE_NAME} de {$STORE_NAME}{/if}. Veuillez nous contacter concernant cette commande.
+
+[SIGNATUR]
+

@@ -1,0 +1,723 @@
+<html>
+<head>
+<style type="text/css">
+html,body { font-family:Verdana; font-size:14px; margin:0 auto; height:100%; width:100%; }
+h1 {margin-left:10px;font-size:20px;}
+h2 {margin-left:10px;font-size:18px;}
+h3 {margin-left:10px;font-size:16px;}
+h4 {margin-left:10px;font-size:15px;}
+.textcompare{ margin:10px 10px 15px; padding: 7px 4px 7px 6px; width:90%; background-color: #E8E8E8; border:1px solid black}
+table {	margin:10px 10px 15px; width: 90%; text-align: left; border:1px solid #000000; border-collapse:collapse; vertical-align:top;}
+table th { padding: 7px 4px 7px 6px; vertical-align: top; border:1px solid #000000;font-weight:bold;background-color: #e8e8e8;}
+table td { padding: 7px 4px 7px 6px; vertical-align: top; border:1px solid #000000;}
+hr { border: 2px solid red; margin:10px 10px 15px; width: 90%; }
+</style>
+</head>
+<body>
+<h1>Vollständige Liste zur Durchführung der Migration</h1>
+<table>
+  <tr>
+	<td>address_book</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>address_format</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>admin_access</td>
+	<td>Teilweise händisch, teilweise adminberechtigungen.php</td>
+  </tr>
+  <tr>
+	<td>aktionen</td>
+	<td>Migration zu main_promotions -> aktionen.php</td>
+  </tr>
+  <tr>
+	<td>amz_products_excluded</td>
+	<td>Keine Inhalte -> Migration entfällt</td>
+  </tr>
+  <tr>
+	<td>amz_transactions</td>
+	<td>amazon.php</td>
+  </tr>
+  <tr>
+	<td>banktransfer</td>
+	<td>Keine Inhalte -> Migration entfällt></td>
+  </tr>
+  <tr>
+	<td>banktransfer_blz</td>
+	<td>Keine Inhalte in modified2 -> Migration entfällt</td>
+  </tr>
+  <tr>
+	<td>banners</td>
+	<td>Keine Inhalte,da ungenutzt -> Migration entfällt</td>
+  </tr>
+  <tr>
+	<td>banners_history</td>
+	<td>Keine Inhalte,da ungenutzt -> Migration entfällt</td>
+  </tr>
+  <tr>
+	<td>carriers</td>
+	<td>Neue Tabelle in Modified 2 -> Keine Übernahme</td>
+  </tr>
+  <tr>
+	<td>campaigns</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+  </tr>
+  <tr>
+	<td>campaigns_ip</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+  </tr>
+  <tr>
+	<td>categories</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>categories_description</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>cm_file_flags</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+  </tr>
+  <tr>
+	<td>configuration</td>
+	<td></td>
+  </tr>
+  <tr>
+	<td>configuration_group</td>
+	<td></td>
+  </tr>
+  <tr>
+	<td>content_manager</td>
+	<td>contentmanager.php</td>
+  </tr>
+  <tr>
+	<td>countries</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+  </tr>
+  <tr>
+	<td>counter</td>
+	<td>Entfällt</td>
+  </tr>
+  <tr>
+	<td>counter_history</td>
+	<td>Entfällt</td>
+  </tr>
+  <tr>
+	<td>countries_english_names</td>
+	<td>Entfällt</td>
+  </tr>
+  <tr>
+	<td>coupons</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>coupons_description</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>coupon_email_track</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>coupon_gv_customer</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>coupon_gv_queue</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>coupon_redeem_track</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>currencies</td>
+	<td>Migration über steuer_laender.php</td>
+  </tr>
+  <tr>
+	<td>customers</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>customers_basket</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>customers_basket_attributes</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>customers_info</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>customers_ip</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>customers_login</td>
+	<td>Neue Tabelle in Modified 2 -> Keine Übernahme</td>
+  </tr>
+  <tr>
+	<td>customers_memo</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>customers_searches</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>customers_status</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>customers_status_history</td>
+	<td>kunden.php</td>
+  </tr>
+  <tr>
+	<td>database_version</td>
+	<td>Mitgration nicht notwendig</td>
+  </tr>
+  <tr>
+	<td>geo_zones</td>
+	<td>Migration über steuer_laender.php</td>
+  </tr>
+  <tr>
+	<td>heidelpay_transaction_data</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+  </tr>
+  <tr>
+	<td>languages</td>
+	<td>Migration nicht notwendig</td>
+  </tr>
+  <tr>
+	<td>lexikon</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+  </tr>
+  <tr>
+	<td>mail_templates</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+  </tr>
+  <tr>
+	<td>magnalister_amazon_apply</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_amazon_errorlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_amazon_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_amazon_variantmatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_api_requests</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ayn24_categories</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ayn24_errorlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ayn24_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ayn24_variantmatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_bepado_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_cdiscount_prepare</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_cdiscount_variantmatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_check24_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_config</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_crowdfox_prepare</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_crowdfox_variantmatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_cs_deletedlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_cs_errorlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_dawanda_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ebay_categories</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ebay_deletedlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ebay_errorlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ebay_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_fyndiq_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_global_selection</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_hitmeister_prepare</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_hitmeister_variantmatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_hood_categories</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_hood_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_idealo_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_images</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_magnacompat_categories</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_magnacompat_categorymatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_magnacompat_deletedlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_magnacompat_errorlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_meinpaket_errorlog</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_meinpaket_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_meinpaket_variantmatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_orders</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_priceminister_prepare</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_priceminister_variantmatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_ricardo_properties</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_selection</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_selection_templates</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_selection_template_entries</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_session</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_tecdoc</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_variations</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_yatego_categories</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>magnalister_yatego_categorymatching</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert</td>
+  </tr>
+  <tr>
+	<td>manufacturers</td>
+	<td>hersteller.php</td>
+  </tr>
+  <tr>
+	<td>manufacturers_info</td>
+	<td>hersteller.php</td>
+  </tr>
+  <tr>
+	<td>manufacturers_pages</td>
+	<td>Neue Tabelle, wird aus hersteller.php erstellt</td>
+  </tr>
+  <tr>
+	<td>media_content</td>
+	<td>Tabelle leer und in modified2 nicht vorhanden. Übernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>module_newsletter</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>module_backup</td>
+	<td>Neue Tabelle im modified2</td>
+  </tr>
+  <tr>
+	<td>newsfeed</td>
+	<td>Neue Tabelle im modified2</td>
+  </tr>
+  <tr>
+	<td>newsletters</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>newsletters_history</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>newsletter_recipients</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>orders</td>
+	<td>orders.php</td>
+  </tr>
+  <tr>
+	<td>orders_products</td>
+	<td>orders.php</td>
+  </tr>
+  <tr>
+	<td>orders_products_attributes</td>
+	<td>orders.php></td>
+  </tr>
+  <tr>
+	<td>orders_products_download</td>
+	<td>orders.php</td>
+  </tr>
+  <tr>
+	<td>orders_recalculate</td>
+	<td>orders.php</td>
+  </tr>
+  <tr>
+	<td>orders_status</td>
+	<td>orders.php</td>
+  </tr>
+  <tr>
+	<td>orders_status_history</td>
+	<td>orders.php</td>
+  </tr>
+  <tr>
+	<td>orders_total</td>
+	<td>orders.php</td>
+  </tr>
+  <tr>
+	<td>orders_tracking</td>
+	<td>Neue Tabelle im modified2</td>
+  </tr>
+  <tr>
+	<td>payment_moneybookers</td>
+	<td>Migratin entfällt, da keine Daten vorhanden</td>
+  </tr>
+  <tr>
+	<td>payment_moneybookers_countries</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>payment_moneybookers_currencies</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>paypal</td>
+	<td>Migration entfällt, da Daten künftig in Echtzeit via API-Abgerufen werden</td>
+  </tr>
+  <tr>
+	<td>paypal_status_history</td>
+	<td>Migration entfällt, da Daten künftig in Echtzeit via API-Abgerufen werden</td>
+  </tr>
+  <tr>
+	<td>paypal_config</td>
+	<td>Manueller Abgleich notwendig</td>
+  </tr>
+  <tr>
+	<td>paypal_ipn</td>
+	<td>Mitgration entfällt, da IPN nicht verwendet wird</td>
+  </tr>
+  <tr>
+	<td>paypal_instructions</td>
+	<td>Neue Tabelle im modified2</td>
+	<td></td>
+  </tr>
+  <tr>
+	<td>paypal_payment</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+	<td></td>
+  </tr>
+  <tr>
+	<td>personal_offers_by_customers_status_0</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>personal_offers_by_customers_status_1</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>personal_offers_by_customers_status_2</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>personal_offers_by_customers_status_3</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>personal_offers_by_customers_status_4</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>pi_ratepay_debitdetails</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>preis_update</td>
+	<td>Migratin entfällt, da in modified2 nicht vorhanden</td>
+  </tr>
+  <tr>
+	<td>products</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_attributes</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_attributes_download</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_content</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_description</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_graduated_prices</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_images</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_notifications</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_options</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_options_values</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_options_values_to_products_options</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_to_attachments</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_to_categories</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_vpe</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_xsell</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_xsell_grp_name</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_fields</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_quick_edit</td>
+	<td>No Migration</td>
+  </tr>
+  <tr>
+	<td>products_tabs</td>
+	<td>produkte.php</td>
+  </tr>
+  <tr>
+	<td>products_tags</td>
+	<td>Keine Migration - nur in NG</td>
+  </tr>
+  <tr>
+	<td>products_tags_options</td>
+	<td>Keine Migration - nur in NG</td>
+  </tr>
+  <tr>
+	<td>products_tags_values</td>
+	<td>Keine Migration - nur in NG</td>
+  </tr>
+  <tr>
+	<td>ratepay_log</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>ratepay_rechnung_history</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>ratepay_rechnung_items</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>ratepay_rechnung_orders</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>ratepay_sepa_history</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>ratepay_sepa_items</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>ratepay_sepa_orders</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>reviews</td>
+	<td>Entfällt, da das Modul nicht verwendet wird</td>
+  </tr>
+  <tr>
+	<td>reviews_description</td>
+	<td>Entfällt, da das Modul nicht verwendet wird</td>
+  </tr>
+  <tr>
+	<td>rma</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>rma_comments</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>rma_reason</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>rma_status</td>
+	<td>Entfällt ersatzlos. Wird neu implementiert oder nicht mehr verwendet</td>
+  </tr>
+  <tr>
+	<td>sessions</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>shipping_status</td>
+	<td>Direktmigration möglich -> direktmigrationen.php</td>
+  </tr>
+  <tr>
+	<td>shop_configuration</td>
+	<td></td>
+  </tr>
+  <tr>
+	<td>specials</td>
+	<td>Datenübernahme, da keine Vorhanden</td>
+  </tr>
+  <tr>
+	<td>tax_class</td>
+	<td>Migration in steuer_laender.php</td>
+  </tr>
+  <tr>
+	<td>tax_rates</td>
+	<td>Migration in steuer_laender.php</td>
+  </tr>
+  <tr>
+	<td>whos_online</td>
+	<td>Datenübernahme entfällt</td>
+  </tr>
+  <tr>
+	<td>zones</td>
+	<td>Migration in steuer_laender.php</td>
+  </tr>
+  <tr>
+	<td>zones_to_geo_zones</td>
+	<td>Migration in steuer_laender.php</td>
+  </tr>
+</table>
+</body>
+</html>

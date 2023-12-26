@@ -1,0 +1,20 @@
+<table  width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
+  <tr>
+    <td style="border-bottom: 1px solid; border-color: #cccccc;"><div align="right"><img src="{$logo_path}logo.gif"></div></td>
+  </tr>
+  <tr>
+    <td><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Gentile Cliente, </strong><br />
+      <br />
+      La ringraziamo molto per il suo ordine{if $STORE_NAME} a {$STORE_NAME}{/if}.<br />
+      <br />
+		Purtroppo Amazon Pay ha rifiutato il suo pagamento.<br />
+		La preghiamo di andare all&lsquo;indirizzo <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR}">{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}checkout_amazon_change_payment.php?order={$ORDER_NR}</a> e aggiornare le informazioni di pagamento per il suo ordine. <br />
+		In alternativa, è possibile aggiornare le informazioni sul pagamento dell'ordine sulla pagina https://payments.amazon.de/overview, selezionando un altro metodo di pagamento o inserendone uno nuovo.
+		Una volta inserito il nuovo metodo di pagamento, verrà effettuato un nuovo tentativo di pagamento e inviata un'e-mail di conferma.
+<br />
+    </font></td>
+  </tr>
+</table>
+
+[SIGNATUR]
+

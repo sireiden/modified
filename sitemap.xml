@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+	<url>
+		<loc>https://dev-ng-ascasa/</loc>
+		<priority>0.5</priority>
+		<changefreq>weekly</changefreq>
+	</url>
+	<url>
+		<loc>https://dev-ng-ascasa/Aktionen/Novy/Novy-Dunstabzug-und-Kochfeld-:-20.html</loc>
+		<priority>monthly</priority>
+		<changefreq>0.4</changefreq>
+		<lastmod>2018-11-23T13:29:28+01:00</lastmod>
+	</url>
+	<url>
+		<loc>https://dev-ng-ascasa/Aktionen/V-ZUG/Grueezi-und-Willkommen-V-ZUG-:-7.html</loc>
+		<priority>monthly</priority>
+		<changefreq>0.4</changefreq>
+		<lastmod>2017-09-19T16:34:28+02:00</lastmod>
+	</url>
+	<url>
+		<loc>https://dev-ng-ascasa/Aktionen/SMEG/SMEG-Outlet-Store-von-ascasa-de-:-13.html</loc>
+		<priority>monthly</priority>
+		<changefreq>0.4</changefreq>
+		<lastmod>2017-11-21T16:38:09+01:00</lastmod>
+	</url>
+	<url>
+		<loc>https://dev-ng-ascasa/Aktionen/Miele/Miele-mit-10-Jahren-Garantie-:-5.html</loc>
+		<priority>monthly</priority>
+		<changefreq>0.4</changefreq>
+		<lastmod>2017-09-19T16:34:40+02:00</lastmod>
+	</url>
+</urlset>

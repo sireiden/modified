@@ -1,0 +1,77 @@
+{if (!isset($STARTPAGE) && $smarty.const.PRODUCT_LIST_BOX == 'true') || ($STARTPAGE == 'true' && $smarty.const.PRODUCT_LIST_BOX_STARTPAGE == 'true')}
+  {* BOXANSICHT *}
+  {foreach name=aussen item=module_data from=$module_content}
+  <div class="listingbox">
+    <div class="lb_inner" style="min-height: 350px;">
+      <div class="lb_image">
+      {if $module_data.PRODUCTS_IMAGE != ''}
+        <a href="{$module_data.PRODUCTS_LINK}"><img class="unveil" src="{$tpl_path}css/images/loading.gif" data-src="{$module_data.PRODUCTS_IMAGE}" alt="{$module_data.PRODUCTS_NAME|onlytext}" /></a>
+        <noscript><a href="{$module_data.PRODUCTS_LINK}"><img src="{$module_data.PRODUCTS_IMAGE}" alt="{$module_data.PRODUCTS_NAME|onlytext}" /></a></noscript>
+      {else}
+        &nbsp;
+      {/if}
+      </div>
+            <img src="{$tpl_path}img_tpl/prod_hr_separator.png" style="width: 100%; height: 5px;">          
+      <center><strong><span class="boxtitlegrey"><a class="boxtitlegrey" href="{$module_data.PRODUCTS_LINK}">{$module_data.PRODUCTS_HEADING_TITLE}</a></strong></span></center>      
+            <img src="{$tpl_path}img_tpl/prod_hr_separator.png" style="width: 100%; height: 5px;">                
+                  <table align="center" border="0" width="100%">
+              		<tr>
+              			<td width="55%" align="center"><!-- Finanzierung--->
+                          {if $module_data.PRODUCTS_PRICE_ARRAY.0.PRODUCTS_PRICE_FLAG != 'NotAllowed'}
+                          {if $module_data.PRODUCTS_VPE}
+                          	<div class="lb_vpe">{$module_data.PRODUCTS_VPE}</div>
+                          {/if}
+                          {$module_data.COMMERZFINANZ}
+                          {/if}                        
+                          <!--img alt="" src="{$tpl_path}img_tpl/icon_nullzinsen.png"><br /><span class="smallgrey">Finanzierung schon ab 50 EUR mtl.<span-->                          
+                          </td>
+              			<td><span class="price">{foreach name=inner item=price_data from=$module_data.PRODUCTS_PRICE_ARRAY}{include file="module/includes/price_box.html"}{/foreach} </span><br>
+              				{if $module_data.PRODUCTS_PRICE_ARRAY.0.PRODUCTS_PRICE_FLAG != 'NotAllowed'}
+                              <span class="smallgrey">{$module_data.PRODUCTS_TAX_INFO}{$module_data.PRODUCTS_SHIPPING_LINK}</span>
+                            {/if}
+                        </td>
+              		</tr>
+                  </table>         
+      
+        
+    </div>
+  </div>    
+  {/foreach}
+
+{else}
+  {* ROWANSICHT *}
+  {foreach name=aussen item=module_data from=$module_content}
+  <div class="listingrow">
+    <div class="lr_inner cf">
+      <div class="lr_image">
+      {if $module_data.PRODUCTS_IMAGE != ''}
+        <a href="{$module_data.PRODUCTS_LINK}"><img class="unveil" src="{$tpl_path}css/images/loading.gif" data-src="{$module_data.PRODUCTS_IMAGE}" alt="{$module_data.PRODUCTS_NAME|onlytext}" /></a>
+        <noscript><a href="{$module_data.PRODUCTS_LINK}"><img src="{$module_data.PRODUCTS_IMAGE}" alt="{$module_data.PRODUCTS_NAME|onlytext}" /></a></noscript>
+      {else}
+        &nbsp;
+      {/if}      
+      </div>
+      <div class="lr_content cf">
+        <div class="lr_title"><h2><a href="{$module_data.PRODUCTS_LINK}">{$module_data.PRODUCTS_HEADING_TITLE}</a></h2></div>
+        <div class="lr_desc_box">
+          {if $module_data.PRODUCTS_SHORT_DESCRIPTION}<div class="lr_desc">{$module_data.PRODUCTS_SHORT_DESCRIPTION}</div>{/if}
+          <div class="lr_shipping">{if $module_data.PRODUCTS_SHIPPING_NAME}{#text_shippingtime#} {if $module_data.PRODUCTS_SHIPPING_IMAGE}<span class="lr_shipping_image"><img src="{$module_data.PRODUCTS_SHIPPING_IMAGE}" alt="{$module_data.PRODUCTS_SHIPPING_NAME|onlytext}" /></span>{/if}{$module_data.PRODUCTS_SHIPPING_NAME_LINK}{else}&nbsp;{/if}</div>
+        </div>
+        <div class="lr_price_box">
+          <div class="lr_price">
+              {foreach name=inner item=price_data from=$module_data.PRODUCTS_PRICE_ARRAY}
+                {include file="module/includes/price_listing.html"}
+              {/foreach}
+          </div>
+          {if $module_data.PRODUCTS_PRICE_ARRAY.0.PRODUCTS_PRICE_FLAG != 'NotAllowed'}
+            {if $module_data.PRODUCTS_VPE}<div class="lr_vpe">{$module_data.PRODUCTS_VPE}</div>{/if}
+            {$module_data.COMMERZFINANZ}
+            <div class="lr_tax">{$module_data.PRODUCTS_TAX_INFO}{$module_data.PRODUCTS_SHIPPING_LINK}</div>
+          {/if}
+          <div class="lr_buttons cf"><div class="cssButtonPos11">{$module_data.PRODUCTS_BUTTON_DETAILS}</div>{if $module_data.PRODUCTS_BUTTON_BUY_NOW || ($module_data.PRODUCTS_FSK18 != '0' && $smarty.const.SHOW_BUTTON_BUY_NOW != 'false')}<div class="cssButtonPos11">{$module_data.PRODUCTS_BUTTON_BUY_NOW}</div>{/if}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/foreach}
+{/if}

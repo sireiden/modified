@@ -1,0 +1,36 @@
+{config_load file="$language/lang_$language.conf" section="newsletter"}
+{config_load file="$language/lang_$language.conf" section="contact_us"}
+{config_load file="lang_`$language`.custom"}
+
+<div style="width:700px;margin: 0px auto;">
+<table width="700" border="0" align="center" cellpadding="5" cellspacing="0">
+	<tr> 
+    	<td align="center" style="padding: 10px 0px;"><img src="{$logo_path}logo.gif" /></td>
+	</tr>
+	<tr> 
+    	<td style="font-size:14px;text-transform:uppercase;padding:10px 5px;border-top: 1px dotted #999;border-bottom: 1px dotted #999;">
+        <font face="Tahoma, Verdana, sans-serif">Es ist eine neue Sonderpreisanfrage eingegangen</font>
+      </td>
+	</tr>
+	<tr> 
+		<td>
+        <br />
+        <font size="2" face="Tahoma, Verdana, sans-serif">
+        Nachfolgend die Details der Anfrage:<br /><br />
+        <strong>Artikel</strong> {$PRODUCT}<br />
+        <strong>Link zum Artikel</strong> {$PRODUCTSLINK}<br />
+        <strong>Anrede</strong> {$GENDER}<br />
+        <strong>Vorname</strong> {$FIRSTNAME}<br />
+        <strong>Nachname</strong> {$LASTNAME}<br />
+        <strong>{$smarty.const.EMAIL_EMAIL}</strong> {$EMAIL}<br />
+        {$ADDITIONAL_FIELDS}
+        <br />
+        <strong>{$smarty.const.EMAIL_MESSAGE}</strong><br />
+        {$MESSAGE}
+      
+        </font>
+        <br /><br />
+		</td>
+	</tr>
+</table>
+</div>

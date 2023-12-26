@@ -1,0 +1,3003 @@
+<html>
+<head>
+<style type="text/css">
+html,body { font-family:Verdana; font-size:14px; margin:0 auto; height:100%; width:100%; }
+h1 {margin-left:10px;font-size:20px;}
+h2 {margin-left:10px;font-size:18px;}
+h3 {margin-left:10px;font-size:16px;}
+h4 {margin-left:10px;font-size:15px;}
+.textcompare{ margin:10px 10px 15px; padding: 7px 4px 7px 6px; width:90%; background-color: #E8E8E8; border:1px solid black}
+table {	margin:10px 10px 15px; width: 90%; text-align: left; border:1px solid #000000; border-collapse:collapse; vertical-align:top;}
+table th { padding: 7px 4px 7px 6px; vertical-align: top; border:1px solid #000000;font-weight:bold;background-color: #e8e8e8;}
+table td { padding: 7px 4px 7px 6px; vertical-align: top; border:1px solid #000000;}
+hr { border: 2px solid red; margin:10px 10px 15px; width: 90%; }
+</style>
+<body>
+<h1>Datenbankanalyse</h1>
+<h2>Datenbankvergleich - Datenbankunterschiede</h2>
+<h4>Text</h4>
+<div class="textcompare">
+	<strong>Nur in der Live-Datenbank</strong><br>
+	aktionen, amz_products_excluded, amz_transactions, counter, counter_history, countries_english_names, customers_searches, heidelpay_transaction_data, lexikon, magnalister_amazon_apply, magnalister_amazon_errorlog, magnalister_amazon_properties, magnalister_amazon_variantmatching, magnalister_api_requests, magnalister_ayn24_categories, magnalister_ayn24_errorlog, magnalister_ayn24_properties, magnalister_ayn24_variantmatching, magnalister_bepado_properties, magnalister_cdiscount_prepare, magnalister_cdiscount_variantmatching, magnalister_check24_properties, magnalister_config, magnalister_crowdfox_prepare, magnalister_crowdfox_variantmatching, magnalister_cs_deletedlog, magnalister_cs_errorlog, magnalister_dawanda_properties, magnalister_ebay_categories, magnalister_ebay_deletedlog, magnalister_ebay_errorlog, magnalister_ebay_properties, magnalister_fyndiq_properties, magnalister_global_selection, magnalister_hitmeister_prepare, magnalister_hitmeister_variantmatching, magnalister_hood_categories, magnalister_hood_properties, magnalister_idealo_properties, magnalister_images, magnalister_magnacompat_categories, magnalister_magnacompat_categorymatching, magnalister_magnacompat_deletedlog, magnalister_magnacompat_errorlog, magnalister_meinpaket_errorlog, magnalister_meinpaket_properties, magnalister_meinpaket_variantmatching, magnalister_orders, magnalister_priceminister_prepare, magnalister_priceminister_variantmatching, magnalister_ricardo_properties, magnalister_selection, magnalister_selection_templates, magnalister_selection_template_entries, magnalister_session, magnalister_tecdoc, magnalister_variations, magnalister_yatego_categories, magnalister_yatego_categorymatching, mail_templates, media_content, payment_moneybookers_countries, payment_moneybookers_currencies, paypal, paypal_config, paypal_ipn, paypal_payment, paypal_status_history, personal_offers_by_customers_status_5, pi_ratepay_debitdetails, preis_update, products_to_attachments, ratepay_log, ratepay_rechnung_history, ratepay_rechnung_items, ratepay_rechnung_orders, ratepay_sepa_history, ratepay_sepa_items, ratepay_sepa_orders, rma, rma_comments, rma_reason, rma_status</div>	
+<div class="textcompare">
+	<strong>Nur in der Dev-Datenbank</strong><br>
+	carriers, customers_login, module_backup, newsfeed, orders_tracking, products_tags, products_tags_options, products_tags_values</div>	
+<div class="textcompare">
+	<strong>Beide Datenbanken</strong><br>
+	address_book, address_format, admin_access, banktransfer, banktransfer_blz, banners, banners_history, campaigns, campaigns_ip, categories, categories_description, cm_file_flags, configuration, configuration_group, content_manager, countries, coupons, coupons_description, coupon_email_track, coupon_gv_customer, coupon_gv_queue, coupon_redeem_track, currencies, customers, customers_basket, customers_basket_attributes, customers_info, customers_ip, customers_memo, customers_status, customers_status_history, database_version, geo_zones, languages, manufacturers, manufacturers_info, module_newsletter, newsletters, newsletters_history, newsletter_recipients, orders, orders_products, orders_products_attributes, orders_products_download, orders_recalculate, orders_status, orders_status_history, orders_total, payment_moneybookers, personal_offers_by_customers_status_0, personal_offers_by_customers_status_1, personal_offers_by_customers_status_2, personal_offers_by_customers_status_3, personal_offers_by_customers_status_4, products, products_attributes, products_attributes_download, products_content, products_description, products_graduated_prices, products_images, products_notifications, products_options, products_options_values, products_options_values_to_products_options, products_to_categories, products_vpe, products_xsell, products_xsell_grp_name, reviews, reviews_description, sessions, shipping_status, shop_configuration, specials, tax_class, tax_rates, whos_online, zones, zones_to_geo_zones</div>
+<h4>Tabelle</h4>
+<table>
+	<tr>
+		<th>Live-DB</th>
+		<th>Dev-DB</th>
+		<th>Gemeinsam</th>
+	</tr>
+	<tr>
+		<td>aktionen<br />amz_products_excluded<br />amz_transactions<br />counter<br />counter_history<br />countries_english_names<br />customers_searches<br />heidelpay_transaction_data<br />lexikon<br />magnalister_amazon_apply<br />magnalister_amazon_errorlog<br />magnalister_amazon_properties<br />magnalister_amazon_variantmatching<br />magnalister_api_requests<br />magnalister_ayn24_categories<br />magnalister_ayn24_errorlog<br />magnalister_ayn24_properties<br />magnalister_ayn24_variantmatching<br />magnalister_bepado_properties<br />magnalister_cdiscount_prepare<br />magnalister_cdiscount_variantmatching<br />magnalister_check24_properties<br />magnalister_config<br />magnalister_crowdfox_prepare<br />magnalister_crowdfox_variantmatching<br />magnalister_cs_deletedlog<br />magnalister_cs_errorlog<br />magnalister_dawanda_properties<br />magnalister_ebay_categories<br />magnalister_ebay_deletedlog<br />magnalister_ebay_errorlog<br />magnalister_ebay_properties<br />magnalister_fyndiq_properties<br />magnalister_global_selection<br />magnalister_hitmeister_prepare<br />magnalister_hitmeister_variantmatching<br />magnalister_hood_categories<br />magnalister_hood_properties<br />magnalister_idealo_properties<br />magnalister_images<br />magnalister_magnacompat_categories<br />magnalister_magnacompat_categorymatching<br />magnalister_magnacompat_deletedlog<br />magnalister_magnacompat_errorlog<br />magnalister_meinpaket_errorlog<br />magnalister_meinpaket_properties<br />magnalister_meinpaket_variantmatching<br />magnalister_orders<br />magnalister_priceminister_prepare<br />magnalister_priceminister_variantmatching<br />magnalister_ricardo_properties<br />magnalister_selection<br />magnalister_selection_templates<br />magnalister_selection_template_entries<br />magnalister_session<br />magnalister_tecdoc<br />magnalister_variations<br />magnalister_yatego_categories<br />magnalister_yatego_categorymatching<br />mail_templates<br />media_content<br />payment_moneybookers_countries<br />payment_moneybookers_currencies<br />paypal<br />paypal_config<br />paypal_ipn<br />paypal_payment<br />paypal_status_history<br />personal_offers_by_customers_status_5<br />pi_ratepay_debitdetails<br />preis_update<br />products_to_attachments<br />ratepay_log<br />ratepay_rechnung_history<br />ratepay_rechnung_items<br />ratepay_rechnung_orders<br />ratepay_sepa_history<br />ratepay_sepa_items<br />ratepay_sepa_orders<br />rma<br />rma_comments<br />rma_reason<br />rma_status</td>
+		<td>carriers<br />customers_login<br />module_backup<br />newsfeed<br />orders_tracking<br />products_tags<br />products_tags_options<br />products_tags_values</td>
+		<td>address_book<br />address_format<br />admin_access<br />banktransfer<br />banktransfer_blz<br />banners<br />banners_history<br />campaigns<br />campaigns_ip<br />categories<br />categories_description<br />cm_file_flags<br />configuration<br />configuration_group<br />content_manager<br />countries<br />coupons<br />coupons_description<br />coupon_email_track<br />coupon_gv_customer<br />coupon_gv_queue<br />coupon_redeem_track<br />currencies<br />customers<br />customers_basket<br />customers_basket_attributes<br />customers_info<br />customers_ip<br />customers_memo<br />customers_status<br />customers_status_history<br />database_version<br />geo_zones<br />languages<br />manufacturers<br />manufacturers_info<br />module_newsletter<br />newsletters<br />newsletters_history<br />newsletter_recipients<br />orders<br />orders_products<br />orders_products_attributes<br />orders_products_download<br />orders_recalculate<br />orders_status<br />orders_status_history<br />orders_total<br />payment_moneybookers<br />personal_offers_by_customers_status_0<br />personal_offers_by_customers_status_1<br />personal_offers_by_customers_status_2<br />personal_offers_by_customers_status_3<br />personal_offers_by_customers_status_4<br />products<br />products_attributes<br />products_attributes_download<br />products_content<br />products_description<br />products_graduated_prices<br />products_images<br />products_notifications<br />products_options<br />products_options_values<br />products_options_values_to_products_options<br />products_to_categories<br />products_vpe<br />products_xsell<br />products_xsell_grp_name<br />reviews<br />reviews_description<br />sessions<br />shipping_status<br />shop_configuration<br />specials<br />tax_class<br />tax_rates<br />whos_online<br />zones<br />zones_to_geo_zones</td>
+	</tr>
+</table>
+<hr>
+<h2>Tabellenunterschiede der existierenden Tabellen</h2>
+    <h3>Tabelle: address_book</h3>
+	<h4>Anzahl Datensätze Live-DB:24749<br>Anzahl Datensätze Dev-DB:1</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	address_class    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	address_book_id, customers_id, entry_gender, entry_company, entry_firstname, entry_lastname, entry_street_address, entry_suburb, entry_postcode, entry_city, entry_state, entry_country_id, entry_zone_id, address_date_added, address_last_modified    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>address_class</td>
+    		<td></td>
+    		<td>address_book_id<br />customers_id<br />entry_gender<br />entry_company<br />entry_firstname<br />entry_lastname<br />entry_street_address<br />entry_suburb<br />entry_postcode<br />entry_city<br />entry_state<br />entry_country_id<br />entry_zone_id<br />address_date_added<br />address_last_modified</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE address_book; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .address_book (address_book_id, customers_id, entry_gender, entry_company, entry_firstname, entry_lastname, entry_street_address, entry_suburb, entry_postcode, entry_city, entry_state, entry_country_id, entry_zone_id, address_date_added, address_last_modified)
+    			SELECT address_book_id, customers_id, entry_gender, entry_company, entry_firstname, entry_lastname, entry_street_address, entry_suburb, entry_postcode, entry_city, entry_state, entry_country_id, entry_zone_id, address_date_added, address_last_modified FROM mod_ascasa_live.address_book;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: address_format</h3>
+	<h4>Anzahl Datensätze Live-DB:8<br>Anzahl Datensätze Dev-DB:8</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	address_format_id, address_format, address_summary    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>address_format_id<br />address_format<br />address_summary</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE address_format; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .address_format (address_format_id, address_format, address_summary)
+    			SELECT address_format_id, address_format, address_summary FROM mod_ascasa_live.address_format;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: admin_access</h3>
+	<h4>Anzahl Datensätze Live-DB:4<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	cache, define_language, blacklist, popup_image, fck_wrapper, sofortueberweisung_install, xajax, backup_db, csv_shippinginfo_export, csv_billing_export, csv_billing_export_do, csv_order_export, csv_order_export_do, preis_update, lexikon, rma, ratepay_logging, delete_logging, ratepay_log, ratepay_order, ratepay_order_script, ratepay_rate_print_order, ratepay_rechnung_print_order, paypal, module_paypal_install, magnalister, csv_article_export, quick_article_list, quick_article_edit, csv_preisanalyse_export, csv_countryorders, csv_billing_export_datev_do, amz_configuration, aktionen, stats_referer, stats_templateset, csv_direktkauf, csv_metatags, paypal_config, paypal_payment, paypal_profile, paypal_webhook, ajax_request, transfer_product_attachments, customers_searches    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	products_tags, gv_customers, stats_stock_warning, filemanager, safeterms, check_update, easymarketing, it_recht_kanzlei, payone_config, payone_logs, protectedshops, parcel_carriers, supermailer, shopgate, newsfeed, logs, shipcloud, trustedshops, blacklist_logs, paypal_info    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customers_id, configuration, modules, countries, currencies, zones, geo_zones, tax_classes, tax_rates, accounting, backup, server_info, whos_online, languages, orders_status, shipping_status, module_export, customers, create_account, customers_status, customers_group, orders, campaigns, print_packingslip, print_order, popup_memo, coupon_admin, listproducts, listcategories, gv_queue, gv_mail, gv_sent, validproducts, validcategories, mail, categories, new_attributes, products_attributes, manufacturers, reviews, specials, products_expected, stats_products_expected, stats_products_viewed, stats_products_purchased, stats_customers, stats_sales_report, stats_campaigns, banner_manager, banner_statistics, module_newsletter, start, content_manager, content_preview, credits, orders_edit, csv_backend, products_vpe, cross_sell_groups, econda, cleverreach, shop_offline, blz_update, removeoldpics, janolaw, haendlerbund, paypal_module    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>cache<br />define_language<br />blacklist<br />popup_image<br />fck_wrapper<br />sofortueberweisung_install<br />xajax<br />backup_db<br />csv_shippinginfo_export<br />csv_billing_export<br />csv_billing_export_do<br />csv_order_export<br />csv_order_export_do<br />preis_update<br />lexikon<br />rma<br />ratepay_logging<br />delete_logging<br />ratepay_log<br />ratepay_order<br />ratepay_order_script<br />ratepay_rate_print_order<br />ratepay_rechnung_print_order<br />paypal<br />module_paypal_install<br />magnalister<br />csv_article_export<br />quick_article_list<br />quick_article_edit<br />csv_preisanalyse_export<br />csv_countryorders<br />csv_billing_export_datev_do<br />amz_configuration<br />aktionen<br />stats_referer<br />stats_templateset<br />csv_direktkauf<br />csv_metatags<br />paypal_config<br />paypal_payment<br />paypal_profile<br />paypal_webhook<br />ajax_request<br />transfer_product_attachments<br />customers_searches</td>
+    		<td>products_tags<br />gv_customers<br />stats_stock_warning<br />filemanager<br />safeterms<br />check_update<br />easymarketing<br />it_recht_kanzlei<br />payone_config<br />payone_logs<br />protectedshops<br />parcel_carriers<br />supermailer<br />shopgate<br />newsfeed<br />logs<br />shipcloud<br />trustedshops<br />blacklist_logs<br />paypal_info</td>
+    		<td>customers_id<br />configuration<br />modules<br />countries<br />currencies<br />zones<br />geo_zones<br />tax_classes<br />tax_rates<br />accounting<br />backup<br />server_info<br />whos_online<br />languages<br />orders_status<br />shipping_status<br />module_export<br />customers<br />create_account<br />customers_status<br />customers_group<br />orders<br />campaigns<br />print_packingslip<br />print_order<br />popup_memo<br />coupon_admin<br />listproducts<br />listcategories<br />gv_queue<br />gv_mail<br />gv_sent<br />validproducts<br />validcategories<br />mail<br />categories<br />new_attributes<br />products_attributes<br />manufacturers<br />reviews<br />specials<br />products_expected<br />stats_products_expected<br />stats_products_viewed<br />stats_products_purchased<br />stats_customers<br />stats_sales_report<br />stats_campaigns<br />banner_manager<br />banner_statistics<br />module_newsletter<br />start<br />content_manager<br />content_preview<br />credits<br />orders_edit<br />csv_backend<br />products_vpe<br />cross_sell_groups<br />econda<br />cleverreach<br />shop_offline<br />blz_update<br />removeoldpics<br />janolaw<br />haendlerbund<br />paypal_module</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE admin_access; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .admin_access (customers_id, configuration, modules, countries, currencies, zones, geo_zones, tax_classes, tax_rates, accounting, backup, server_info, whos_online, languages, orders_status, shipping_status, module_export, customers, create_account, customers_status, customers_group, orders, campaigns, print_packingslip, print_order, popup_memo, coupon_admin, listproducts, listcategories, gv_queue, gv_mail, gv_sent, validproducts, validcategories, mail, categories, new_attributes, products_attributes, manufacturers, reviews, specials, products_expected, stats_products_expected, stats_products_viewed, stats_products_purchased, stats_customers, stats_sales_report, stats_campaigns, banner_manager, banner_statistics, module_newsletter, start, content_manager, content_preview, credits, orders_edit, csv_backend, products_vpe, cross_sell_groups, econda, cleverreach, shop_offline, blz_update, removeoldpics, janolaw, haendlerbund, paypal_module)
+    			SELECT customers_id, configuration, modules, countries, currencies, zones, geo_zones, tax_classes, tax_rates, accounting, backup, server_info, whos_online, languages, orders_status, shipping_status, module_export, customers, create_account, customers_status, customers_group, orders, campaigns, print_packingslip, print_order, popup_memo, coupon_admin, listproducts, listcategories, gv_queue, gv_mail, gv_sent, validproducts, validcategories, mail, categories, new_attributes, products_attributes, manufacturers, reviews, specials, products_expected, stats_products_expected, stats_products_viewed, stats_products_purchased, stats_customers, stats_sales_report, stats_campaigns, banner_manager, banner_statistics, module_newsletter, start, content_manager, content_preview, credits, orders_edit, csv_backend, products_vpe, cross_sell_groups, econda, cleverreach, shop_offline, blz_update, removeoldpics, janolaw, haendlerbund, paypal_module FROM mod_ascasa_live.admin_access;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: banktransfer</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	banktransfer_iban, banktransfer_bic, banktransfer_owner_email    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_id, banktransfer_owner, banktransfer_number, banktransfer_bankname, banktransfer_blz, banktransfer_status, banktransfer_prz, banktransfer_fax    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>banktransfer_iban<br />banktransfer_bic<br />banktransfer_owner_email</td>
+    		<td>orders_id<br />banktransfer_owner<br />banktransfer_number<br />banktransfer_bankname<br />banktransfer_blz<br />banktransfer_status<br />banktransfer_prz<br />banktransfer_fax</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE banktransfer; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .banktransfer (orders_id, banktransfer_owner, banktransfer_number, banktransfer_bankname, banktransfer_blz, banktransfer_status, banktransfer_prz, banktransfer_fax)
+    			SELECT orders_id, banktransfer_owner, banktransfer_number, banktransfer_bankname, banktransfer_blz, banktransfer_status, banktransfer_prz, banktransfer_fax FROM mod_ascasa_live.banktransfer;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: banktransfer_blz</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:3542</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	blz, bankname, prz    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>blz<br />bankname<br />prz</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE banktransfer_blz; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .banktransfer_blz (blz, bankname, prz)
+    			SELECT blz, bankname, prz FROM mod_ascasa_live.banktransfer_blz;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: banners</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	languages_id    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	banners_id, banners_title, banners_url, banners_image, banners_group, banners_html_text, expires_impressions, expires_date, date_scheduled, date_added, date_status_change, status    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>languages_id</td>
+    		<td>banners_id<br />banners_title<br />banners_url<br />banners_image<br />banners_group<br />banners_html_text<br />expires_impressions<br />expires_date<br />date_scheduled<br />date_added<br />date_status_change<br />status</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE banners; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .banners (banners_id, banners_title, banners_url, banners_image, banners_group, banners_html_text, expires_impressions, expires_date, date_scheduled, date_added, date_status_change, status)
+    			SELECT banners_id, banners_title, banners_url, banners_image, banners_group, banners_html_text, expires_impressions, expires_date, date_scheduled, date_added, date_status_change, status FROM mod_ascasa_live.banners;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: banners_history</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:3</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	banners_history_id, banners_id, banners_shown, banners_clicked, banners_history_date    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>banners_history_id<br />banners_id<br />banners_shown<br />banners_clicked<br />banners_history_date</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE banners_history; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .banners_history (banners_history_id, banners_id, banners_shown, banners_clicked, banners_history_date)
+    			SELECT banners_history_id, banners_id, banners_shown, banners_clicked, banners_history_date FROM mod_ascasa_live.banners_history;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: campaigns</h3>
+	<h4>Anzahl Datensätze Live-DB:6<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	campaigns_id, campaigns_name, campaigns_refID, campaigns_leads, date_added, last_modified    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>campaigns_id<br />campaigns_name<br />campaigns_refID<br />campaigns_leads<br />date_added<br />last_modified</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE campaigns; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .campaigns (campaigns_id, campaigns_name, campaigns_refID, campaigns_leads, date_added, last_modified)
+    			SELECT campaigns_id, campaigns_name, campaigns_refID, campaigns_leads, date_added, last_modified FROM mod_ascasa_live.campaigns;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: campaigns_ip</h3>
+	<h4>Anzahl Datensätze Live-DB:2697165<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	user_ip, time, campaign    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>user_ip<br />time<br />campaign</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE campaigns_ip; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .campaigns_ip (user_ip, time, campaign)
+    			SELECT user_ip, time, campaign FROM mod_ascasa_live.campaigns_ip;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: categories</h3>
+	<h4>Anzahl Datensätze Live-DB:313<br>Anzahl Datensätze Dev-DB:313</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	categories_icon, group_ids, group_permission_5    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	categories_id, categories_image, parent_id, categories_status, categories_template, group_permission_0, group_permission_1, group_permission_2, group_permission_3, listing_template, sort_order, products_sorting, products_sorting2, date_added, last_modified, group_permission_4    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>categories_icon<br />group_ids<br />group_permission_5</td>
+    		<td></td>
+    		<td>categories_id<br />categories_image<br />parent_id<br />categories_status<br />categories_template<br />group_permission_0<br />group_permission_1<br />group_permission_2<br />group_permission_3<br />listing_template<br />sort_order<br />products_sorting<br />products_sorting2<br />date_added<br />last_modified<br />group_permission_4</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE categories; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .categories (categories_id, categories_image, parent_id, categories_status, categories_template, group_permission_0, group_permission_1, group_permission_2, group_permission_3, listing_template, sort_order, products_sorting, products_sorting2, date_added, last_modified, group_permission_4)
+    			SELECT categories_id, categories_image, parent_id, categories_status, categories_template, group_permission_0, group_permission_1, group_permission_2, group_permission_3, listing_template, sort_order, products_sorting, products_sorting2, date_added, last_modified, group_permission_4 FROM mod_ascasa_live.categories;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: categories_description</h3>
+	<h4>Anzahl Datensätze Live-DB:314<br>Anzahl Datensätze Dev-DB:314</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	categories_id, language_id, categories_name, categories_heading_title, categories_description, categories_meta_title, categories_meta_description, categories_meta_keywords    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>categories_id<br />language_id<br />categories_name<br />categories_heading_title<br />categories_description<br />categories_meta_title<br />categories_meta_description<br />categories_meta_keywords</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE categories_description; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .categories_description (categories_id, language_id, categories_name, categories_heading_title, categories_description, categories_meta_title, categories_meta_description, categories_meta_keywords)
+    			SELECT categories_id, language_id, categories_name, categories_heading_title, categories_description, categories_meta_title, categories_meta_description, categories_meta_keywords FROM mod_ascasa_live.categories_description;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: cm_file_flags</h3>
+	<h4>Anzahl Datensätze Live-DB:2<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	file_flag, file_flag_name    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>file_flag<br />file_flag_name</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE cm_file_flags; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .cm_file_flags (file_flag, file_flag_name)
+    			SELECT file_flag, file_flag_name FROM mod_ascasa_live.cm_file_flags;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: configuration</h3>
+	<h4>Anzahl Datensätze Live-DB:905<br>Anzahl Datensätze Dev-DB:386</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	configuration_id, configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>configuration_id<br />configuration_key<br />configuration_value<br />configuration_group_id<br />sort_order<br />last_modified<br />date_added<br />use_function<br />set_function</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE configuration; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .configuration (configuration_id, configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function)
+    			SELECT configuration_id, configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function FROM mod_ascasa_live.configuration;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: configuration_group</h3>
+	<h4>Anzahl Datensätze Live-DB:31<br>Anzahl Datensätze Dev-DB:28</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	configuration_group_id, configuration_group_title, configuration_group_description, sort_order, visible    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>configuration_group_id<br />configuration_group_title<br />configuration_group_description<br />sort_order<br />visible</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE configuration_group; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .configuration_group (configuration_group_id, configuration_group_title, configuration_group_description, sort_order, visible)
+    			SELECT configuration_group_id, configuration_group_title, configuration_group_description, sort_order, visible FROM mod_ascasa_live.configuration_group;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: content_manager</h3>
+	<h4>Anzahl Datensätze Live-DB:36<br>Anzahl Datensätze Dev-DB:26</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	content_meta_robots, content_active, content_group_index, date_added, last_modified    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	content_id, categories_id, parent_id, group_ids, languages_id, content_title, content_heading, content_text, sort_order, file_flag, content_file, content_status, content_group, content_delete, content_meta_title, content_meta_description, content_meta_keywords    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>content_meta_robots<br />content_active<br />content_group_index<br />date_added<br />last_modified</td>
+    		<td>content_id<br />categories_id<br />parent_id<br />group_ids<br />languages_id<br />content_title<br />content_heading<br />content_text<br />sort_order<br />file_flag<br />content_file<br />content_status<br />content_group<br />content_delete<br />content_meta_title<br />content_meta_description<br />content_meta_keywords</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE content_manager; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .content_manager (content_id, categories_id, parent_id, group_ids, languages_id, content_title, content_heading, content_text, sort_order, file_flag, content_file, content_status, content_group, content_delete, content_meta_title, content_meta_description, content_meta_keywords)
+    			SELECT content_id, categories_id, parent_id, group_ids, languages_id, content_title, content_heading, content_text, sort_order, file_flag, content_file, content_status, content_group, content_delete, content_meta_title, content_meta_description, content_meta_keywords FROM mod_ascasa_live.content_manager;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: countries</h3>
+	<h4>Anzahl Datensätze Live-DB:240<br>Anzahl Datensätze Dev-DB:240</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	required_zones    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	countries_id, countries_name, countries_iso_code_2, countries_iso_code_3, address_format_id, status    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>required_zones</td>
+    		<td>countries_id<br />countries_name<br />countries_iso_code_2<br />countries_iso_code_3<br />address_format_id<br />status</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE countries; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .countries (countries_id, countries_name, countries_iso_code_2, countries_iso_code_3, address_format_id, status)
+    			SELECT countries_id, countries_name, countries_iso_code_2, countries_iso_code_3, address_format_id, status FROM mod_ascasa_live.countries;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: coupons</h3>
+	<h4>Anzahl Datensätze Live-DB:3<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	coupon_id, coupon_type, coupon_code, coupon_amount, coupon_minimum_order, coupon_start_date, coupon_expire_date, uses_per_coupon, uses_per_user, restrict_to_products, restrict_to_categories, restrict_to_customers, coupon_active, date_created, date_modified    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>coupon_id<br />coupon_type<br />coupon_code<br />coupon_amount<br />coupon_minimum_order<br />coupon_start_date<br />coupon_expire_date<br />uses_per_coupon<br />uses_per_user<br />restrict_to_products<br />restrict_to_categories<br />restrict_to_customers<br />coupon_active<br />date_created<br />date_modified</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE coupons; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .coupons (coupon_id, coupon_type, coupon_code, coupon_amount, coupon_minimum_order, coupon_start_date, coupon_expire_date, uses_per_coupon, uses_per_user, restrict_to_products, restrict_to_categories, restrict_to_customers, coupon_active, date_created, date_modified)
+    			SELECT coupon_id, coupon_type, coupon_code, coupon_amount, coupon_minimum_order, coupon_start_date, coupon_expire_date, uses_per_coupon, uses_per_user, restrict_to_products, restrict_to_categories, restrict_to_customers, coupon_active, date_created, date_modified FROM mod_ascasa_live.coupons;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: coupons_description</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	coupon_id, language_id, coupon_name, coupon_description    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>coupon_id<br />language_id<br />coupon_name<br />coupon_description</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE coupons_description; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .coupons_description (coupon_id, language_id, coupon_name, coupon_description)
+    			SELECT coupon_id, language_id, coupon_name, coupon_description FROM mod_ascasa_live.coupons_description;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: coupon_email_track</h3>
+	<h4>Anzahl Datensätze Live-DB:3<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	unique_id, coupon_id, customer_id_sent, sent_firstname, sent_lastname, emailed_to, date_sent    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>unique_id<br />coupon_id<br />customer_id_sent<br />sent_firstname<br />sent_lastname<br />emailed_to<br />date_sent</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE coupon_email_track; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .coupon_email_track (unique_id, coupon_id, customer_id_sent, sent_firstname, sent_lastname, emailed_to, date_sent)
+    			SELECT unique_id, coupon_id, customer_id_sent, sent_firstname, sent_lastname, emailed_to, date_sent FROM mod_ascasa_live.coupon_email_track;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: coupon_gv_customer</h3>
+	<h4>Anzahl Datensätze Live-DB:4<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customer_id, amount    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>customer_id<br />amount</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE coupon_gv_customer; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .coupon_gv_customer (customer_id, amount)
+    			SELECT customer_id, amount FROM mod_ascasa_live.coupon_gv_customer;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: coupon_gv_queue</h3>
+	<h4>Anzahl Datensätze Live-DB:20<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	unique_id, customer_id, order_id, amount, date_created, ipaddr, release_flag    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>unique_id<br />customer_id<br />order_id<br />amount<br />date_created<br />ipaddr<br />release_flag</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE coupon_gv_queue; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .coupon_gv_queue (unique_id, customer_id, order_id, amount, date_created, ipaddr, release_flag)
+    			SELECT unique_id, customer_id, order_id, amount, date_created, ipaddr, release_flag FROM mod_ascasa_live.coupon_gv_queue;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: coupon_redeem_track</h3>
+	<h4>Anzahl Datensätze Live-DB:3<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	unique_id, coupon_id, customer_id, redeem_date, redeem_ip, order_id    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>unique_id<br />coupon_id<br />customer_id<br />redeem_date<br />redeem_ip<br />order_id</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE coupon_redeem_track; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .coupon_redeem_track (unique_id, coupon_id, customer_id, redeem_date, redeem_ip, order_id)
+    			SELECT unique_id, coupon_id, customer_id, redeem_date, redeem_ip, order_id FROM mod_ascasa_live.coupon_redeem_track;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: currencies</h3>
+	<h4>Anzahl Datensätze Live-DB:1<br>Anzahl Datensätze Dev-DB:4</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	status    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	currencies_id, title, code, symbol_left, symbol_right, decimal_point, thousands_point, decimal_places, value, last_updated    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>status</td>
+    		<td>currencies_id<br />title<br />code<br />symbol_left<br />symbol_right<br />decimal_point<br />thousands_point<br />decimal_places<br />value<br />last_updated</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE currencies; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .currencies (currencies_id, title, code, symbol_left, symbol_right, decimal_point, thousands_point, decimal_places, value, last_updated)
+    			SELECT currencies_id, title, code, symbol_left, symbol_right, decimal_point, thousands_point, decimal_places, value, last_updated FROM mod_ascasa_live.currencies;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: customers</h3>
+	<h4>Anzahl Datensätze Live-DB:21467<br>Anzahl Datensätze Dev-DB:1</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	hpgp_kto, hpgp_blz, hpgp_own, hpdd_kto, hpdd_blz, hpdd_own, hpsu_kto, hpsu_blz, hpsu_own, amazon_customer_id    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	password_request_time    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customers_id, customers_cid, customers_vat_id, customers_vat_id_status, customers_warning, customers_status, customers_gender, customers_firstname, customers_lastname, customers_dob, customers_email_address, customers_default_address_id, customers_telephone, customers_fax, customers_password, customers_newsletter, customers_newsletter_mode, member_flag, delete_user, account_type, password_request_key, payment_unallowed, shipping_unallowed, refferers_id, customers_date_added, customers_last_modified    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>hpgp_kto<br />hpgp_blz<br />hpgp_own<br />hpdd_kto<br />hpdd_blz<br />hpdd_own<br />hpsu_kto<br />hpsu_blz<br />hpsu_own<br />amazon_customer_id</td>
+    		<td>password_request_time</td>
+    		<td>customers_id<br />customers_cid<br />customers_vat_id<br />customers_vat_id_status<br />customers_warning<br />customers_status<br />customers_gender<br />customers_firstname<br />customers_lastname<br />customers_dob<br />customers_email_address<br />customers_default_address_id<br />customers_telephone<br />customers_fax<br />customers_password<br />customers_newsletter<br />customers_newsletter_mode<br />member_flag<br />delete_user<br />account_type<br />password_request_key<br />payment_unallowed<br />shipping_unallowed<br />refferers_id<br />customers_date_added<br />customers_last_modified</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE customers; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .customers (customers_id, customers_cid, customers_vat_id, customers_vat_id_status, customers_warning, customers_status, customers_gender, customers_firstname, customers_lastname, customers_dob, customers_email_address, customers_default_address_id, customers_telephone, customers_fax, customers_password, customers_newsletter, customers_newsletter_mode, member_flag, delete_user, account_type, password_request_key, payment_unallowed, shipping_unallowed, refferers_id, customers_date_added, customers_last_modified)
+    			SELECT customers_id, customers_cid, customers_vat_id, customers_vat_id_status, customers_warning, customers_status, customers_gender, customers_firstname, customers_lastname, customers_dob, customers_email_address, customers_default_address_id, customers_telephone, customers_fax, customers_password, customers_newsletter, customers_newsletter_mode, member_flag, delete_user, account_type, password_request_key, payment_unallowed, shipping_unallowed, refferers_id, customers_date_added, customers_last_modified FROM mod_ascasa_live.customers;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: customers_basket</h3>
+	<h4>Anzahl Datensätze Live-DB:11996<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customers_basket_id, customers_id, products_id, customers_basket_quantity, final_price, customers_basket_date_added    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>customers_basket_id<br />customers_id<br />products_id<br />customers_basket_quantity<br />final_price<br />customers_basket_date_added</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE customers_basket; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .customers_basket (customers_basket_id, customers_id, products_id, customers_basket_quantity, final_price, customers_basket_date_added)
+    			SELECT customers_basket_id, customers_id, products_id, customers_basket_quantity, final_price, customers_basket_date_added FROM mod_ascasa_live.customers_basket;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: customers_basket_attributes</h3>
+	<h4>Anzahl Datensätze Live-DB:3562<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customers_basket_attributes_id, customers_id, products_id, products_options_id, products_options_value_id    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>customers_basket_attributes_id<br />customers_id<br />products_id<br />products_options_id<br />products_options_value_id</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE customers_basket_attributes; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .customers_basket_attributes (customers_basket_attributes_id, customers_id, products_id, products_options_id, products_options_value_id)
+    			SELECT customers_basket_attributes_id, customers_id, products_id, products_options_id, products_options_value_id FROM mod_ascasa_live.customers_basket_attributes;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: customers_info</h3>
+	<h4>Anzahl Datensätze Live-DB:21467<br>Anzahl Datensätze Dev-DB:1</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customers_info_id, customers_info_date_of_last_logon, customers_info_number_of_logons, customers_info_date_account_created, customers_info_date_account_last_modified, global_product_notifications    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>customers_info_id<br />customers_info_date_of_last_logon<br />customers_info_number_of_logons<br />customers_info_date_account_created<br />customers_info_date_account_last_modified<br />global_product_notifications</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE customers_info; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .customers_info (customers_info_id, customers_info_date_of_last_logon, customers_info_number_of_logons, customers_info_date_account_created, customers_info_date_account_last_modified, global_product_notifications)
+    			SELECT customers_info_id, customers_info_date_of_last_logon, customers_info_number_of_logons, customers_info_date_account_created, customers_info_date_account_last_modified, global_product_notifications FROM mod_ascasa_live.customers_info;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: customers_ip</h3>
+	<h4>Anzahl Datensätze Live-DB:51032<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customers_ip_id, customers_id, customers_ip, customers_ip_date, customers_host, customers_advertiser, customers_referer_url    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>customers_ip_id<br />customers_id<br />customers_ip<br />customers_ip_date<br />customers_host<br />customers_advertiser<br />customers_referer_url</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE customers_ip; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .customers_ip (customers_ip_id, customers_id, customers_ip, customers_ip_date, customers_host, customers_advertiser, customers_referer_url)
+    			SELECT customers_ip_id, customers_id, customers_ip, customers_ip_date, customers_host, customers_advertiser, customers_referer_url FROM mod_ascasa_live.customers_ip;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: customers_memo</h3>
+	<h4>Anzahl Datensätze Live-DB:3174<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	memo_id, customers_id, memo_date, memo_title, memo_text, poster_id    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>memo_id<br />customers_id<br />memo_date<br />memo_title<br />memo_text<br />poster_id</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE customers_memo; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .customers_memo (memo_id, customers_id, memo_date, memo_title, memo_text, poster_id)
+    			SELECT memo_id, customers_id, memo_date, memo_title, memo_text, poster_id FROM mod_ascasa_live.customers_memo;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: customers_status</h3>
+	<h4>Anzahl Datensätze Live-DB:10<br>Anzahl Datensätze Dev-DB:10</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	customers_status_show_tax_total, customers_status_reviews_status, customers_status_specials    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>customers_status_show_tax_total<br />customers_status_reviews_status<br />customers_status_specials</td>
+    		<td>customers_status_id<br />language_id<br />customers_status_name<br />customers_status_public<br />customers_status_min_order<br />customers_status_max_order<br />customers_status_image<br />customers_status_discount<br />customers_status_ot_discount_flag<br />customers_status_ot_discount<br />customers_status_graduated_prices<br />customers_status_show_price<br />customers_status_show_price_tax<br />customers_status_add_tax_ot<br />customers_status_payment_unallowed<br />customers_status_shipping_unallowed<br />customers_status_discount_attributes<br />customers_fsk18<br />customers_fsk18_display<br />customers_status_write_reviews<br />customers_status_read_reviews</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE customers_status; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews)
+    			SELECT customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews FROM mod_ascasa_live.customers_status;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: customers_status_history</h3>
+	<h4>Anzahl Datensätze Live-DB:14<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customers_status_history_id, customers_id, new_value, old_value, date_added, customer_notified    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>customers_status_history_id<br />customers_id<br />new_value<br />old_value<br />date_added<br />customer_notified</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE customers_status_history; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .customers_status_history (customers_status_history_id, customers_id, new_value, old_value, date_added, customer_notified)
+    			SELECT customers_status_history_id, customers_id, new_value, old_value, date_added, customer_notified FROM mod_ascasa_live.customers_status_history;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: database_version</h3>
+	<h4>Anzahl Datensätze Live-DB:1<br>Anzahl Datensätze Dev-DB:1</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	id    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	version    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>id</td>
+    		<td>version</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE database_version; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .database_version (version)
+    			SELECT version FROM mod_ascasa_live.database_version;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: geo_zones</h3>
+	<h4>Anzahl Datensätze Live-DB:14<br>Anzahl Datensätze Dev-DB:3</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	geo_zone_info    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	geo_zone_id, geo_zone_name, geo_zone_description, last_modified, date_added    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>geo_zone_info</td>
+    		<td>geo_zone_id<br />geo_zone_name<br />geo_zone_description<br />last_modified<br />date_added</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE geo_zones; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .geo_zones (geo_zone_id, geo_zone_name, geo_zone_description, last_modified, date_added)
+    			SELECT geo_zone_id, geo_zone_name, geo_zone_description, last_modified, date_added FROM mod_ascasa_live.geo_zones;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: languages</h3>
+	<h4>Anzahl Datensätze Live-DB:2<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	status_admin    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	languages_id, name, code, image, directory, sort_order, language_charset, status    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>status_admin</td>
+    		<td>languages_id<br />name<br />code<br />image<br />directory<br />sort_order<br />language_charset<br />status</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE languages; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .languages (languages_id, name, code, image, directory, sort_order, language_charset, status)
+    			SELECT languages_id, name, code, image, directory, sort_order, language_charset, status FROM mod_ascasa_live.languages;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: manufacturers</h3>
+	<h4>Anzahl Datensätze Live-DB:66<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	manufacturers_slideshow, manufacturers_active    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	manufacturers_id, manufacturers_name, manufacturers_image, date_added, last_modified    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>manufacturers_slideshow<br />manufacturers_active</td>
+    		<td></td>
+    		<td>manufacturers_id<br />manufacturers_name<br />manufacturers_image<br />date_added<br />last_modified</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE manufacturers; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .manufacturers (manufacturers_id, manufacturers_name, manufacturers_image, date_added, last_modified)
+    			SELECT manufacturers_id, manufacturers_name, manufacturers_image, date_added, last_modified FROM mod_ascasa_live.manufacturers;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: manufacturers_info</h3>
+	<h4>Anzahl Datensätze Live-DB:66<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	additional_info_1_title, additional_info_1_text, additional_info_1_meta_title, additional_info_1_meta_description, additional_info_1_meta_keywords, additional_info_2_title, additional_info_2_text, additional_info_2_meta_title, additional_info_2_meta_description, additional_info_2_meta_keywords, additional_info_3_title, additional_info_3_text, additional_info_3_meta_title, additional_info_3_meta_description, additional_info_3_meta_keywords, additional_info_4_title, additional_info_4_text, additional_info_4_meta_title, additional_info_4_meta_description, additional_info_4_meta_keywords, additional_info_5_title, additional_info_5_text, additional_info_5_meta_title, additional_info_5_meta_description, additional_info_5_meta_keywords    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	manufacturers_description    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	manufacturers_id, languages_id, manufacturers_meta_title, manufacturers_meta_description, manufacturers_meta_keywords, manufacturers_url, url_clicked, date_last_click    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>additional_info_1_title<br />additional_info_1_text<br />additional_info_1_meta_title<br />additional_info_1_meta_description<br />additional_info_1_meta_keywords<br />additional_info_2_title<br />additional_info_2_text<br />additional_info_2_meta_title<br />additional_info_2_meta_description<br />additional_info_2_meta_keywords<br />additional_info_3_title<br />additional_info_3_text<br />additional_info_3_meta_title<br />additional_info_3_meta_description<br />additional_info_3_meta_keywords<br />additional_info_4_title<br />additional_info_4_text<br />additional_info_4_meta_title<br />additional_info_4_meta_description<br />additional_info_4_meta_keywords<br />additional_info_5_title<br />additional_info_5_text<br />additional_info_5_meta_title<br />additional_info_5_meta_description<br />additional_info_5_meta_keywords</td>
+    		<td>manufacturers_description</td>
+    		<td>manufacturers_id<br />languages_id<br />manufacturers_meta_title<br />manufacturers_meta_description<br />manufacturers_meta_keywords<br />manufacturers_url<br />url_clicked<br />date_last_click</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE manufacturers_info; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .manufacturers_info (manufacturers_id, languages_id, manufacturers_meta_title, manufacturers_meta_description, manufacturers_meta_keywords, manufacturers_url, url_clicked, date_last_click)
+    			SELECT manufacturers_id, languages_id, manufacturers_meta_title, manufacturers_meta_description, manufacturers_meta_keywords, manufacturers_url, url_clicked, date_last_click FROM mod_ascasa_live.manufacturers_info;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: module_newsletter</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	newsletter_id, title, bc, cc, date, status, body    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>newsletter_id<br />title<br />bc<br />cc<br />date<br />status<br />body</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE module_newsletter; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .module_newsletter (newsletter_id, title, bc, cc, date, status, body)
+    			SELECT newsletter_id, title, bc, cc, date, status, body FROM mod_ascasa_live.module_newsletter;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: newsletters</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	newsletters_id, title, content, module, date_added, date_sent, status, locked    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>newsletters_id<br />title<br />content<br />module<br />date_added<br />date_sent<br />status<br />locked</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE newsletters; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .newsletters (newsletters_id, title, content, module, date_added, date_sent, status, locked)
+    			SELECT newsletters_id, title, content, module, date_added, date_sent, status, locked FROM mod_ascasa_live.newsletters;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: newsletters_history</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	news_hist_id, news_hist_cs, news_hist_cs_date_sent    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>news_hist_id<br />news_hist_cs<br />news_hist_cs_date_sent</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE newsletters_history; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .newsletters_history (news_hist_id, news_hist_cs, news_hist_cs_date_sent)
+    			SELECT news_hist_id, news_hist_cs, news_hist_cs_date_sent FROM mod_ascasa_live.newsletters_history;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: newsletter_recipients</h3>
+	<h4>Anzahl Datensätze Live-DB:306<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	ip_date_added, date_confirmed, ip_date_confirmed    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	mail_id, customers_email_address, customers_id, customers_status, customers_firstname, customers_lastname, mail_status, mail_key, date_added    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>ip_date_added<br />date_confirmed<br />ip_date_confirmed</td>
+    		<td>mail_id<br />customers_email_address<br />customers_id<br />customers_status<br />customers_firstname<br />customers_lastname<br />mail_status<br />mail_key<br />date_added</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE newsletter_recipients; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .newsletter_recipients (mail_id, customers_email_address, customers_id, customers_status, customers_firstname, customers_lastname, mail_status, mail_key, date_added)
+    			SELECT mail_id, customers_email_address, customers_id, customers_status, customers_firstname, customers_lastname, mail_status, mail_key, date_added FROM mod_ascasa_live.newsletter_recipients;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: orders</h3>
+	<h4>Anzahl Datensätze Live-DB:36926<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	customers_telephone_optional, cc_type, cc_owner, cc_number, cc_expires, cc_start, cc_issue, cc_cvv, ibn_billnr, ibn_billdate, invoice_date, csv_exported, referer, idealo_order_number, amazon_order_id, amazon_contract_id, contact_bewertung, templateset, kvnummer    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	customers_gender, customers_country_iso_code_2, delivery_gender, billing_gender, languages_id    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_id, customers_id, customers_cid, customers_vat_id, customers_status, customers_status_name, customers_status_image, customers_status_discount, customers_name, customers_firstname, customers_lastname, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_firstname, delivery_lastname, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_country_iso_code_2, delivery_address_format_id, billing_name, billing_firstname, billing_lastname, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_country_iso_code_2, billing_address_format_id, payment_method, comments, last_modified, date_purchased, orders_status, orders_date_finished, currency, currency_value, account_type, payment_class, shipping_method, shipping_class, customers_ip, language, afterbuy_success, afterbuy_id, refferers_id, conversion_type, orders_ident_key    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>customers_telephone_optional<br />cc_type<br />cc_owner<br />cc_number<br />cc_expires<br />cc_start<br />cc_issue<br />cc_cvv<br />ibn_billnr<br />ibn_billdate<br />invoice_date<br />csv_exported<br />referer<br />idealo_order_number<br />amazon_order_id<br />amazon_contract_id<br />contact_bewertung<br />templateset<br />kvnummer</td>
+    		<td>customers_gender<br />customers_country_iso_code_2<br />delivery_gender<br />billing_gender<br />languages_id</td>
+    		<td>orders_id<br />customers_id<br />customers_cid<br />customers_vat_id<br />customers_status<br />customers_status_name<br />customers_status_image<br />customers_status_discount<br />customers_name<br />customers_firstname<br />customers_lastname<br />customers_company<br />customers_street_address<br />customers_suburb<br />customers_city<br />customers_postcode<br />customers_state<br />customers_country<br />customers_telephone<br />customers_email_address<br />customers_address_format_id<br />delivery_name<br />delivery_firstname<br />delivery_lastname<br />delivery_company<br />delivery_street_address<br />delivery_suburb<br />delivery_city<br />delivery_postcode<br />delivery_state<br />delivery_country<br />delivery_country_iso_code_2<br />delivery_address_format_id<br />billing_name<br />billing_firstname<br />billing_lastname<br />billing_company<br />billing_street_address<br />billing_suburb<br />billing_city<br />billing_postcode<br />billing_state<br />billing_country<br />billing_country_iso_code_2<br />billing_address_format_id<br />payment_method<br />comments<br />last_modified<br />date_purchased<br />orders_status<br />orders_date_finished<br />currency<br />currency_value<br />account_type<br />payment_class<br />shipping_method<br />shipping_class<br />customers_ip<br />language<br />afterbuy_success<br />afterbuy_id<br />refferers_id<br />conversion_type<br />orders_ident_key</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE orders; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .orders (orders_id, customers_id, customers_cid, customers_vat_id, customers_status, customers_status_name, customers_status_image, customers_status_discount, customers_name, customers_firstname, customers_lastname, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_firstname, delivery_lastname, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_country_iso_code_2, delivery_address_format_id, billing_name, billing_firstname, billing_lastname, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_country_iso_code_2, billing_address_format_id, payment_method, comments, last_modified, date_purchased, orders_status, orders_date_finished, currency, currency_value, account_type, payment_class, shipping_method, shipping_class, customers_ip, language, afterbuy_success, afterbuy_id, refferers_id, conversion_type, orders_ident_key)
+    			SELECT orders_id, customers_id, customers_cid, customers_vat_id, customers_status, customers_status_name, customers_status_image, customers_status_discount, customers_name, customers_firstname, customers_lastname, customers_company, customers_street_address, customers_suburb, customers_city, customers_postcode, customers_state, customers_country, customers_telephone, customers_email_address, customers_address_format_id, delivery_name, delivery_firstname, delivery_lastname, delivery_company, delivery_street_address, delivery_suburb, delivery_city, delivery_postcode, delivery_state, delivery_country, delivery_country_iso_code_2, delivery_address_format_id, billing_name, billing_firstname, billing_lastname, billing_company, billing_street_address, billing_suburb, billing_city, billing_postcode, billing_state, billing_country, billing_country_iso_code_2, billing_address_format_id, payment_method, comments, last_modified, date_purchased, orders_status, orders_date_finished, currency, currency_value, account_type, payment_class, shipping_method, shipping_class, customers_ip, language, afterbuy_success, afterbuy_id, refferers_id, conversion_type, orders_ident_key FROM mod_ascasa_live.orders;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: orders_products</h3>
+	<h4>Anzahl Datensätze Live-DB:60748<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	AmazonOrderItemCode, AmazonShippingCosts, AmazonCoupon    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	products_ean, products_price_origin, products_weight    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_products_id, orders_id, products_id, products_model, products_name, products_price, products_discount_made, products_shipping_time, final_price, products_tax, products_quantity, allow_tax, products_order_description    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>AmazonOrderItemCode<br />AmazonShippingCosts<br />AmazonCoupon</td>
+    		<td>products_ean<br />products_price_origin<br />products_weight</td>
+    		<td>orders_products_id<br />orders_id<br />products_id<br />products_model<br />products_name<br />products_price<br />products_discount_made<br />products_shipping_time<br />final_price<br />products_tax<br />products_quantity<br />allow_tax<br />products_order_description</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE orders_products; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .orders_products (orders_products_id, orders_id, products_id, products_model, products_name, products_price, products_discount_made, products_shipping_time, final_price, products_tax, products_quantity, allow_tax, products_order_description)
+    			SELECT orders_products_id, orders_id, products_id, products_model, products_name, products_price, products_discount_made, products_shipping_time, final_price, products_tax, products_quantity, allow_tax, products_order_description FROM mod_ascasa_live.orders_products;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: orders_products_attributes</h3>
+	<h4>Anzahl Datensätze Live-DB:18161<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	products_attributes_id    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	attributes_model, attributes_ean, options_values_weight, weight_prefix    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_products_attributes_id, orders_id, orders_products_id, products_options, products_options_values, options_values_price, price_prefix, orders_products_options_id, orders_products_options_values_id    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>products_attributes_id</td>
+    		<td>attributes_model<br />attributes_ean<br />options_values_weight<br />weight_prefix</td>
+    		<td>orders_products_attributes_id<br />orders_id<br />orders_products_id<br />products_options<br />products_options_values<br />options_values_price<br />price_prefix<br />orders_products_options_id<br />orders_products_options_values_id</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE orders_products_attributes; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .orders_products_attributes (orders_products_attributes_id, orders_id, orders_products_id, products_options, products_options_values, options_values_price, price_prefix, orders_products_options_id, orders_products_options_values_id)
+    			SELECT orders_products_attributes_id, orders_id, orders_products_id, products_options, products_options_values, options_values_price, price_prefix, orders_products_options_id, orders_products_options_values_id FROM mod_ascasa_live.orders_products_attributes;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: orders_products_download</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	download_key    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_products_download_id, orders_id, orders_products_id, orders_products_filename, download_maxdays, download_count    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>download_key</td>
+    		<td>orders_products_download_id<br />orders_id<br />orders_products_id<br />orders_products_filename<br />download_maxdays<br />download_count</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE orders_products_download; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .orders_products_download (orders_products_download_id, orders_id, orders_products_id, orders_products_filename, download_maxdays, download_count)
+    			SELECT orders_products_download_id, orders_id, orders_products_id, orders_products_filename, download_maxdays, download_count FROM mod_ascasa_live.orders_products_download;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: orders_recalculate</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_recalculate_id, orders_id, n_price, b_price, tax, tax_rate, class    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>orders_recalculate_id<br />orders_id<br />n_price<br />b_price<br />tax<br />tax_rate<br />class</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE orders_recalculate; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .orders_recalculate (orders_recalculate_id, orders_id, n_price, b_price, tax, tax_rate, class)
+    			SELECT orders_recalculate_id, orders_id, n_price, b_price, tax, tax_rate, class FROM mod_ascasa_live.orders_recalculate;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: orders_status</h3>
+	<h4>Anzahl Datensätze Live-DB:45<br>Anzahl Datensätze Dev-DB:8</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_status_id, language_id, orders_status_name, sort_order    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>orders_status_id<br />language_id<br />orders_status_name<br />sort_order</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE orders_status; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .orders_status (orders_status_id, language_id, orders_status_name, sort_order)
+    			SELECT orders_status_id, language_id, orders_status_name, sort_order FROM mod_ascasa_live.orders_status;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: orders_status_history</h3>
+	<h4>Anzahl Datensätze Live-DB:164732<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_status_history_id, orders_id, orders_status_id, date_added, customer_notified, comments, comments_sent    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>orders_status_history_id<br />orders_id<br />orders_status_id<br />date_added<br />customer_notified<br />comments<br />comments_sent</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE orders_status_history; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .orders_status_history (orders_status_history_id, orders_id, orders_status_id, date_added, customer_notified, comments, comments_sent)
+    			SELECT orders_status_history_id, orders_id, orders_status_id, date_added, customer_notified, comments, comments_sent FROM mod_ascasa_live.orders_status_history;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: orders_total</h3>
+	<h4>Anzahl Datensätze Live-DB:159482<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	orders_total_id, orders_id, title, text, value, class, sort_order    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>orders_total_id<br />orders_id<br />title<br />text<br />value<br />class<br />sort_order</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE orders_total; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .orders_total (orders_total_id, orders_id, title, text, value, class, sort_order)
+    			SELECT orders_total_id, orders_id, title, text, value, class, sort_order FROM mod_ascasa_live.orders_total;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: payment_moneybookers</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	mb_TRID, mb_ERRNO, mb_ERRTXT, mb_DATE, mb_MBTID, mb_STATUS, mb_ORDERID    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>mb_TRID<br />mb_ERRNO<br />mb_ERRTXT<br />mb_DATE<br />mb_MBTID<br />mb_STATUS<br />mb_ORDERID</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE payment_moneybookers; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .payment_moneybookers (mb_TRID, mb_ERRNO, mb_ERRTXT, mb_DATE, mb_MBTID, mb_STATUS, mb_ORDERID)
+    			SELECT mb_TRID, mb_ERRNO, mb_ERRTXT, mb_DATE, mb_MBTID, mb_STATUS, mb_ORDERID FROM mod_ascasa_live.payment_moneybookers;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: personal_offers_by_customers_status_0</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	price_id, products_id, quantity, personal_offer    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>price_id<br />products_id<br />quantity<br />personal_offer</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE personal_offers_by_customers_status_0; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .personal_offers_by_customers_status_0 (price_id, products_id, quantity, personal_offer)
+    			SELECT price_id, products_id, quantity, personal_offer FROM mod_ascasa_live.personal_offers_by_customers_status_0;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: personal_offers_by_customers_status_1</h3>
+	<h4>Anzahl Datensätze Live-DB:41950<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	price_id, products_id, quantity, personal_offer    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>price_id<br />products_id<br />quantity<br />personal_offer</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE personal_offers_by_customers_status_1; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .personal_offers_by_customers_status_1 (price_id, products_id, quantity, personal_offer)
+    			SELECT price_id, products_id, quantity, personal_offer FROM mod_ascasa_live.personal_offers_by_customers_status_1;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: personal_offers_by_customers_status_2</h3>
+	<h4>Anzahl Datensätze Live-DB:41950<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	price_id, products_id, quantity, personal_offer    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>price_id<br />products_id<br />quantity<br />personal_offer</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE personal_offers_by_customers_status_2; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .personal_offers_by_customers_status_2 (price_id, products_id, quantity, personal_offer)
+    			SELECT price_id, products_id, quantity, personal_offer FROM mod_ascasa_live.personal_offers_by_customers_status_2;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: personal_offers_by_customers_status_3</h3>
+	<h4>Anzahl Datensätze Live-DB:20854<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	price_id, products_id, quantity, personal_offer    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>price_id<br />products_id<br />quantity<br />personal_offer</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE personal_offers_by_customers_status_3; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .personal_offers_by_customers_status_3 (price_id, products_id, quantity, personal_offer)
+    			SELECT price_id, products_id, quantity, personal_offer FROM mod_ascasa_live.personal_offers_by_customers_status_3;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: personal_offers_by_customers_status_4</h3>
+	<h4>Anzahl Datensätze Live-DB:20054<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	price_id, products_id, quantity, personal_offer    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>price_id<br />products_id<br />quantity<br />personal_offer</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE personal_offers_by_customers_status_4; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .personal_offers_by_customers_status_4 (price_id, products_id, quantity, personal_offer)
+    			SELECT price_id, products_id, quantity, personal_offer FROM mod_ascasa_live.personal_offers_by_customers_status_4;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products</h3>
+	<h4>Anzahl Datensätze Live-DB:21645<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	products_shippingcost, products_cod_cost, group_ids, products_min_order, products_shippinginfo, products_cartspecial, products_cash_discount, products_cod_fee, products_giropay_fee, products_paypal_fee, products_rechnung_fee, products_sofortueberweisung_fee, products_kreditkarte_fee, products_debit_fee, products_amazon_fee, products_efficiency, products_efficiency_class, products_datasheet, products_tab_1, products_tab_1_headline, products_tab_2, products_tab_2_headline, products_tab_3, products_tab_3_headline, products_tab_4, products_tab_4_headline, products_tab_5, products_tab_5_headline, products_extra_text, products_best_price, manufacturers_additional_info_1, manufacturers_additional_info_2, manufacturers_additional_info_3, manufacturers_additional_info_4, manufacturers_additional_info_5, direktkauf, group_permission_5    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_id, products_ean, products_quantity, products_shippingtime, products_model, group_permission_0, group_permission_1, group_permission_2, group_permission_3, products_sort, products_image, products_price, products_discount_allowed, products_date_added, products_last_modified, products_date_available, products_weight, products_status, products_tax_class_id, product_template, options_template, manufacturers_id, products_manufacturers_model, products_ordered, products_fsk18, products_vpe, products_vpe_status, products_vpe_value, products_startpage, products_startpage_sort, group_permission_4    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>products_shippingcost<br />products_cod_cost<br />group_ids<br />products_min_order<br />products_shippinginfo<br />products_cartspecial<br />products_cash_discount<br />products_cod_fee<br />products_giropay_fee<br />products_paypal_fee<br />products_rechnung_fee<br />products_sofortueberweisung_fee<br />products_kreditkarte_fee<br />products_debit_fee<br />products_amazon_fee<br />products_efficiency<br />products_efficiency_class<br />products_datasheet<br />products_tab_1<br />products_tab_1_headline<br />products_tab_2<br />products_tab_2_headline<br />products_tab_3<br />products_tab_3_headline<br />products_tab_4<br />products_tab_4_headline<br />products_tab_5<br />products_tab_5_headline<br />products_extra_text<br />products_best_price<br />manufacturers_additional_info_1<br />manufacturers_additional_info_2<br />manufacturers_additional_info_3<br />manufacturers_additional_info_4<br />manufacturers_additional_info_5<br />direktkauf<br />group_permission_5</td>
+    		<td></td>
+    		<td>products_id<br />products_ean<br />products_quantity<br />products_shippingtime<br />products_model<br />group_permission_0<br />group_permission_1<br />group_permission_2<br />group_permission_3<br />products_sort<br />products_image<br />products_price<br />products_discount_allowed<br />products_date_added<br />products_last_modified<br />products_date_available<br />products_weight<br />products_status<br />products_tax_class_id<br />product_template<br />options_template<br />manufacturers_id<br />products_manufacturers_model<br />products_ordered<br />products_fsk18<br />products_vpe<br />products_vpe_status<br />products_vpe_value<br />products_startpage<br />products_startpage_sort<br />group_permission_4</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products (products_id, products_ean, products_quantity, products_shippingtime, products_model, group_permission_0, group_permission_1, group_permission_2, group_permission_3, products_sort, products_image, products_price, products_discount_allowed, products_date_added, products_last_modified, products_date_available, products_weight, products_status, products_tax_class_id, product_template, options_template, manufacturers_id, products_manufacturers_model, products_ordered, products_fsk18, products_vpe, products_vpe_status, products_vpe_value, products_startpage, products_startpage_sort, group_permission_4)
+    			SELECT products_id, products_ean, products_quantity, products_shippingtime, products_model, group_permission_0, group_permission_1, group_permission_2, group_permission_3, products_sort, products_image, products_price, products_discount_allowed, products_date_added, products_last_modified, products_date_available, products_weight, products_status, products_tax_class_id, product_template, options_template, manufacturers_id, products_manufacturers_model, products_ordered, products_fsk18, products_vpe, products_vpe_status, products_vpe_value, products_startpage, products_startpage_sort, group_permission_4 FROM mod_ascasa_live.products;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_attributes</h3>
+	<h4>Anzahl Datensätze Live-DB:45018<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	attributes_vpe_id, attributes_vpe_value    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_attributes_id, products_id, options_id, options_values_id, options_values_price, price_prefix, attributes_model, attributes_stock, options_values_weight, weight_prefix, sortorder, attributes_ean    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>attributes_vpe_id<br />attributes_vpe_value</td>
+    		<td>products_attributes_id<br />products_id<br />options_id<br />options_values_id<br />options_values_price<br />price_prefix<br />attributes_model<br />attributes_stock<br />options_values_weight<br />weight_prefix<br />sortorder<br />attributes_ean</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_attributes; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_attributes (products_attributes_id, products_id, options_id, options_values_id, options_values_price, price_prefix, attributes_model, attributes_stock, options_values_weight, weight_prefix, sortorder, attributes_ean)
+    			SELECT products_attributes_id, products_id, options_id, options_values_id, options_values_price, price_prefix, attributes_model, attributes_stock, options_values_weight, weight_prefix, sortorder, attributes_ean FROM mod_ascasa_live.products_attributes;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_attributes_download</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_attributes_id, products_attributes_filename, products_attributes_maxdays, products_attributes_maxcount    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>products_attributes_id<br />products_attributes_filename<br />products_attributes_maxdays<br />products_attributes_maxcount</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_attributes_download; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_attributes_download (products_attributes_id, products_attributes_filename, products_attributes_maxdays, products_attributes_maxcount)
+    			SELECT products_attributes_id, products_attributes_filename, products_attributes_maxdays, products_attributes_maxcount FROM mod_ascasa_live.products_attributes_download;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_content</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	content_id, products_id, group_ids, content_name, content_file, content_link, languages_id, content_read, file_comment    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>content_id<br />products_id<br />group_ids<br />content_name<br />content_file<br />content_link<br />languages_id<br />content_read<br />file_comment</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_content; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_content (content_id, products_id, group_ids, content_name, content_file, content_link, languages_id, content_read, file_comment)
+    			SELECT content_id, products_id, group_ids, content_name, content_file, content_link, languages_id, content_read, file_comment FROM mod_ascasa_live.products_content;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_description</h3>
+	<h4>Anzahl Datensätze Live-DB:22103<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	products_summary, products_last_quick_edit, products_advisor, products_efficiency_text, products_datasheet_text, products_tab_1_text, products_tab_2_text, products_tab_3_text, products_tab_4_text, products_tab_5_text    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_id, language_id, products_name, products_description, products_short_description, products_keywords, products_meta_title, products_meta_description, products_meta_keywords, products_url, products_viewed, products_order_description    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td>products_summary<br />products_last_quick_edit<br />products_advisor<br />products_efficiency_text<br />products_datasheet_text<br />products_tab_1_text<br />products_tab_2_text<br />products_tab_3_text<br />products_tab_4_text<br />products_tab_5_text</td>
+    		<td></td>
+    		<td>products_id<br />language_id<br />products_name<br />products_description<br />products_short_description<br />products_keywords<br />products_meta_title<br />products_meta_description<br />products_meta_keywords<br />products_url<br />products_viewed<br />products_order_description</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_description; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_description (products_id, language_id, products_name, products_description, products_short_description, products_keywords, products_meta_title, products_meta_description, products_meta_keywords, products_url, products_viewed, products_order_description)
+    			SELECT products_id, language_id, products_name, products_description, products_short_description, products_keywords, products_meta_title, products_meta_description, products_meta_keywords, products_url, products_viewed, products_order_description FROM mod_ascasa_live.products_description;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_graduated_prices</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_id, quantity, unitprice    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>products_id<br />quantity<br />unitprice</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_graduated_prices; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_graduated_prices (products_id, quantity, unitprice)
+    			SELECT products_id, quantity, unitprice FROM mod_ascasa_live.products_graduated_prices;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_images</h3>
+	<h4>Anzahl Datensätze Live-DB:118473<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	image_id, products_id, image_nr, image_name    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>image_id<br />products_id<br />image_nr<br />image_name</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_images; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_images (image_id, products_id, image_nr, image_name)
+    			SELECT image_id, products_id, image_nr, image_name FROM mod_ascasa_live.products_images;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_notifications</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_id, customers_id, date_added    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>products_id<br />customers_id<br />date_added</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_notifications; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_notifications (products_id, customers_id, date_added)
+    			SELECT products_id, customers_id, date_added FROM mod_ascasa_live.products_notifications;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_options</h3>
+	<h4>Anzahl Datensätze Live-DB:120<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_options_id, language_id, products_options_name, products_options_sortorder    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>products_options_id<br />language_id<br />products_options_name<br />products_options_sortorder</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_options; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_options (products_options_id, language_id, products_options_name, products_options_sortorder)
+    			SELECT products_options_id, language_id, products_options_name, products_options_sortorder FROM mod_ascasa_live.products_options;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_options_values</h3>
+	<h4>Anzahl Datensätze Live-DB:1192<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	products_options_values_sortorder    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_options_values_id, language_id, products_options_values_name    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>products_options_values_sortorder</td>
+    		<td>products_options_values_id<br />language_id<br />products_options_values_name</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_options_values; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_options_values (products_options_values_id, language_id, products_options_values_name)
+    			SELECT products_options_values_id, language_id, products_options_values_name FROM mod_ascasa_live.products_options_values;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_options_values_to_products_options</h3>
+	<h4>Anzahl Datensätze Live-DB:1195<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_options_values_to_products_options_id, products_options_id, products_options_values_id    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>products_options_values_to_products_options_id<br />products_options_id<br />products_options_values_id</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_options_values_to_products_options; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_options_values_to_products_options (products_options_values_to_products_options_id, products_options_id, products_options_values_id)
+    			SELECT products_options_values_to_products_options_id, products_options_id, products_options_values_id FROM mod_ascasa_live.products_options_values_to_products_options;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_to_categories</h3>
+	<h4>Anzahl Datensätze Live-DB:24138<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_id, categories_id    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>products_id<br />categories_id</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_to_categories; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_to_categories (products_id, categories_id)
+    			SELECT products_id, categories_id FROM mod_ascasa_live.products_to_categories;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_vpe</h3>
+	<h4>Anzahl Datensätze Live-DB:1<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_vpe_id, language_id, products_vpe_name    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>products_vpe_id<br />language_id<br />products_vpe_name</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_vpe; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_vpe (products_vpe_id, language_id, products_vpe_name)
+    			SELECT products_vpe_id, language_id, products_vpe_name FROM mod_ascasa_live.products_vpe;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_xsell</h3>
+	<h4>Anzahl Datensätze Live-DB:1<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	ID, products_id, products_xsell_grp_name_id, xsell_id, sort_order    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>ID<br />products_id<br />products_xsell_grp_name_id<br />xsell_id<br />sort_order</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_xsell; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_xsell (ID, products_id, products_xsell_grp_name_id, xsell_id, sort_order)
+    			SELECT ID, products_id, products_xsell_grp_name_id, xsell_id, sort_order FROM mod_ascasa_live.products_xsell;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: products_xsell_grp_name</h3>
+	<h4>Anzahl Datensätze Live-DB:2<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	products_xsell_grp_name_id, xsell_sort_order, language_id, groupname    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>products_xsell_grp_name_id<br />xsell_sort_order<br />language_id<br />groupname</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE products_xsell_grp_name; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .products_xsell_grp_name (products_xsell_grp_name_id, xsell_sort_order, language_id, groupname)
+    			SELECT products_xsell_grp_name_id, xsell_sort_order, language_id, groupname FROM mod_ascasa_live.products_xsell_grp_name;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: reviews</h3>
+	<h4>Anzahl Datensätze Live-DB:1<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	reviews_status    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	reviews_id, products_id, customers_id, customers_name, reviews_rating, date_added, last_modified, reviews_read    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>reviews_status</td>
+    		<td>reviews_id<br />products_id<br />customers_id<br />customers_name<br />reviews_rating<br />date_added<br />last_modified<br />reviews_read</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE reviews; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .reviews (reviews_id, products_id, customers_id, customers_name, reviews_rating, date_added, last_modified, reviews_read)
+    			SELECT reviews_id, products_id, customers_id, customers_name, reviews_rating, date_added, last_modified, reviews_read FROM mod_ascasa_live.reviews;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: reviews_description</h3>
+	<h4>Anzahl Datensätze Live-DB:1<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	reviews_id, languages_id, reviews_text    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>reviews_id<br />languages_id<br />reviews_text</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE reviews_description; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .reviews_description (reviews_id, languages_id, reviews_text)
+    			SELECT reviews_id, languages_id, reviews_text FROM mod_ascasa_live.reviews_description;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: sessions</h3>
+	<h4>Anzahl Datensätze Live-DB:734<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	sesskey, expiry, value, flag    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>sesskey<br />expiry<br />value<br />flag</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE sessions; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .sessions (sesskey, expiry, value, flag)
+    			SELECT sesskey, expiry, value, flag FROM mod_ascasa_live.sessions;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: shipping_status</h3>
+	<h4>Anzahl Datensätze Live-DB:23<br>Anzahl Datensätze Dev-DB:6</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	sort_order    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	shipping_status_id, language_id, shipping_status_name, shipping_status_image    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>sort_order</td>
+    		<td>shipping_status_id<br />language_id<br />shipping_status_name<br />shipping_status_image</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE shipping_status; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .shipping_status (shipping_status_id, language_id, shipping_status_name, shipping_status_image)
+    			SELECT shipping_status_id, language_id, shipping_status_name, shipping_status_image FROM mod_ascasa_live.shipping_status;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: shop_configuration</h3>
+	<h4>Anzahl Datensätze Live-DB:2<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	configuration_id, configuration_key, configuration_value    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>configuration_id<br />configuration_key<br />configuration_value</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE shop_configuration; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .shop_configuration (configuration_id, configuration_key, configuration_value)
+    			SELECT configuration_id, configuration_key, configuration_value FROM mod_ascasa_live.shop_configuration;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: specials</h3>
+	<h4>Anzahl Datensätze Live-DB:0<br>Anzahl Datensätze Dev-DB:0</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	start_date    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	specials_id, products_id, specials_quantity, specials_new_products_price, specials_date_added, specials_last_modified, expires_date, date_status_change, status    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td>start_date</td>
+    		<td>specials_id<br />products_id<br />specials_quantity<br />specials_new_products_price<br />specials_date_added<br />specials_last_modified<br />expires_date<br />date_status_change<br />status</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			        	1.Kommando<br>
+        	<i>TRUNCATE TABLE specials; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .specials (specials_id, products_id, specials_quantity, specials_new_products_price, specials_date_added, specials_last_modified, expires_date, date_status_change, status)
+    			SELECT specials_id, products_id, specials_quantity, specials_new_products_price, specials_date_added, specials_last_modified, expires_date, date_status_change, status FROM mod_ascasa_live.specials;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: tax_class</h3>
+	<h4>Anzahl Datensätze Live-DB:2<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	tax_class_id, tax_class_title, tax_class_description, last_modified, date_added    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>tax_class_id<br />tax_class_title<br />tax_class_description<br />last_modified<br />date_added</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE tax_class; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .tax_class (tax_class_id, tax_class_title, tax_class_description, last_modified, date_added)
+    			SELECT tax_class_id, tax_class_title, tax_class_description, last_modified, date_added FROM mod_ascasa_live.tax_class;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: tax_rates</h3>
+	<h4>Anzahl Datensätze Live-DB:15<br>Anzahl Datensätze Dev-DB:4</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	tax_rates_id, tax_zone_id, tax_class_id, tax_priority, tax_rate, tax_description, last_modified, date_added    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>tax_rates_id<br />tax_zone_id<br />tax_class_id<br />tax_priority<br />tax_rate<br />tax_description<br />last_modified<br />date_added</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE tax_rates; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .tax_rates (tax_rates_id, tax_zone_id, tax_class_id, tax_priority, tax_rate, tax_description, last_modified, date_added)
+    			SELECT tax_rates_id, tax_zone_id, tax_class_id, tax_priority, tax_rate, tax_description, last_modified, date_added FROM mod_ascasa_live.tax_rates;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: whos_online</h3>
+	<h4>Anzahl Datensätze Live-DB:105<br>Anzahl Datensätze Dev-DB:2</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	customer_id, full_name, session_id, ip_address, time_entry, time_last_click, last_page_url, http_referer    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>customer_id<br />full_name<br />session_id<br />ip_address<br />time_entry<br />time_last_click<br />last_page_url<br />http_referer</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE whos_online; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .whos_online (customer_id, full_name, session_id, ip_address, time_entry, time_last_click, last_page_url, http_referer)
+    			SELECT customer_id, full_name, session_id, ip_address, time_entry, time_last_click, last_page_url, http_referer FROM mod_ascasa_live.whos_online;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: zones</h3>
+	<h4>Anzahl Datensätze Live-DB:875<br>Anzahl Datensätze Dev-DB:1065</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	zone_id, zone_country_id, zone_code, zone_name    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>zone_id<br />zone_country_id<br />zone_code<br />zone_name</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE zones; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .zones (zone_id, zone_country_id, zone_code, zone_name)
+    			SELECT zone_id, zone_country_id, zone_code, zone_name FROM mod_ascasa_live.zones;
+        	</i>
+    	</div>
+
+    <hr>  
+        <h3>Tabelle: zones_to_geo_zones</h3>
+	<h4>Anzahl Datensätze Live-DB:238<br>Anzahl Datensätze Dev-DB:241</h4>
+    <h4>Text</h4>
+    <div class="textcompare">
+    	<strong>Nur in der Live-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Nur in der Dev-Datenbank</strong><br>
+    	    </div>	
+    <div class="textcompare">
+    	<strong>Beide Datenbanken</strong><br>
+    	association_id, zone_country_id, zone_id, geo_zone_id, last_modified, date_added    </div>
+    <h4>Tabelle</h4>
+    <table>
+    	<tr>
+    		<th>Live-DB</th>
+    		<th>Dev-DB</th>
+    		<th>Gemeinsam</th>
+    	</tr>
+    	<tr>
+    		<td></td>
+    		<td></td>
+    		<td>association_id<br />zone_country_id<br />zone_id<br />geo_zone_id<br />last_modified<br />date_added</td>
+    	</tr>
+    </table>
+    <h4>Abgleich der identischen Daten via Query</h4>
+        <div class="textcompare">
+        	<strong>Login zur Datenbank via SSH und anschließend das Kommando "plesk db" ausführen</strong><br>
+			<span style="color:red;"><b>Achtung! Es existieren Einträge in der Dev-DB. Vorher prüfen, ob die Tabelle wirklich geleer werden soll<br></b></span>        	1.Kommando<br>
+        	<i>TRUNCATE TABLE zones_to_geo_zones; </i><br>
+        	2. Kommando<br>
+        	<i>INSERT INTO ascasa_ng_db .zones_to_geo_zones (association_id, zone_country_id, zone_id, geo_zone_id, last_modified, date_added)
+    			SELECT association_id, zone_country_id, zone_id, geo_zone_id, last_modified, date_added FROM mod_ascasa_live.zones_to_geo_zones;
+        	</i>
+    	</div>
+
+    <hr>  
+    </body>

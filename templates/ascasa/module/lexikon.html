@@ -1,0 +1,26 @@
+{config_load file="$language/lang_$language.conf" section="lexikon"}
+
+<p>{$CONTENT_TEXT}</p>
+
+<!-- ABC -->
+<ul id="lexAlphabet">
+{foreach name=lex item=alphabet from=$abc}
+	<li><a {if $alphabet.active}class="active" {/if}href="{$alphabet.link}">{$alphabet.buchstabe}</a></li>
+{/foreach}
+</ul>
+<!-- ABC eof -->
+
+<!-- AUFLISTUNG -->
+
+{foreach name=all item=desc from=$lexikon}
+	<div id="lexName">{$desc.name}</div>
+	{if $desc.description}<div id="lexDescription">{$desc.description}</div>{/if}
+{/foreach}	
+
+<!-- AUFLISTUNG eof -->
+
+
+<div>{$PAGEITEMS}</div>
+{$NAVIGATION}
+
+
